@@ -1,4 +1,4 @@
-# Databases and SQL
+# Databases and Query Langs (like SQL)
 
 I'm doing a free course. Hope to update the repo accordingly 👍️.
 
