@@ -28,3 +28,6 @@ No, file systems are not enough, because of the following reasons:
 5. Concurrent access anomalies.
 6. Atomicity problems - an action on the system must either take place fully, or it must leave the system as is. This is difficult to do with a file system (TODO: why?).
 7. Security (authorization) - not all parts of the system must be available to all stakeholders, and this is difficult to enforce in a file system because the access programs are written in an ad-hoc manner.
+
+#### What is a database system
+A database system is a collection of interrelated data and a set of programs to access and modify the data.
