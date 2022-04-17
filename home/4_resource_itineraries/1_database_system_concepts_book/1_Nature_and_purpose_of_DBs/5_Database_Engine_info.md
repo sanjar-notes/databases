@@ -22,4 +22,13 @@ The functional components of a database can be broadly divided into 3:
 - The raw data are stored on the disk using the file system provided by the OS.
 - The storage manager is responsible for interaction with the file system. This includes the translation of DML statements into low-level file-system commands. Thus, the storage manager is responsible for storing, retrieving and updating data in the database.
 - Components of the storage manager:
-	1. Authorization and integrity manager - which tests for the satisfaction of integrity constraints
+	1. Authorization and integrity manager - which tests for the satisfaction of integrity constraints and checks the authority of users to access data.
+	2. Transaction manager - ensures that the DB remains in a consistent (correct) state despite system failures, and that concurrent transactions proceed without conflicts.
+	3. File manager - manages allocation of space on disk storage and the data structures used to represent information stored on disk.
+	4. Buffer manager - responsible for fetching data from disk into main memory, and deciding what to cache in main memory. The buffer manager is a critical part of the database system, since it enables the database to handle data sizes that are much larger than the size of the main memory.
+- The storage manager implements several data structures as part of the physical system implementation:
+	1. Data files - which store the database itself.
+	2. Data dictionary - stores metadata about the structure of the database, in particular the schema of the database.
+	3. Indices - provides fast access to data items. Like the index of a textbook, a database index provides pointers to those data items that hold a particular value. For example - we could use an index to find the *instructor* record with a particular *ID*, or all *instructor* records with a particular *name*.
+
+Storage media, file structures and buffer management are discussed ahead.
