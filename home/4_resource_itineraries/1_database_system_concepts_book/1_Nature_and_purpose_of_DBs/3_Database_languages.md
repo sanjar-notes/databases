@@ -21,3 +21,9 @@
 - Almost all relational database systems use SQL, or a variant of it.
 - It was invented at IBM in 1974.
 - It was the first language to use the relation model, based on Edgar F. Codds influential paper on the subject. Despite not completely adhering to the relational model as described in the paper, it is the most widely used database language.
+
+#### Database access from Application programs
+- Non-procedural database languages like SQL are not Turing complete.
+- SQL does not support actions such as input from users, output to displays, or communication over the network.
+- Due to the above points, SQL queries are embedded in a general purpose programming language like C++, Java, Python etc. This language is also known as the *host* language.
+- To access the database, DML statements need to be sent from the host to the database where they will be executed. This done via an API that's used to send queries and retrieve results. ODBC, JDBC are examples of API for the C, and Java language, respectively.
