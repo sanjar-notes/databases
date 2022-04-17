@@ -1,4 +1,5 @@
 # 3. Database languages
+#### Why database languages
 - Manipulation (including access) to a database needs a uniform language. The goal is to allow humans to interact efficiently with the system.
 - A query is a statement requesting retrieval of information.
 
