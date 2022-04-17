@@ -31,3 +31,14 @@ There are 3 levels of data abstraction for a database system:
 3. View level - the highest level of abstraction, describes a relevant part of the database. The same database system may have many views of the database for different stakeholders, based on their need. Here, only data is shown, without relationships to other data, TODO: really only data without relationships? Example - a college clerk.
 
 - An important feature of data models is they hide low-level implementation even from the database-application developers.
+
+#### Instances and Schemas
+- Databases change over time as data is inserted, updated or deleted.
+- Instance - the collection of information stored in the database at a particular moment.
+- Schema - the overall design of the database. 
+	- Databases have several schemas, partitioned according to the level of abstraction.
+	- *Physical schema* describes the database design at the physical level, *logical schema* describes the database design at the logical level. 
+	- A database may also have several schemas at the view level, sometimes called "subschemas", that describe different views of the database.
+- Physical schema is hidden beneath the logical schema, and can usually be changed without affecting application programs.
+- Traditionally, logical schemas were changed infrequently. But newer database applications require flexible logical schema, as records of the same type may have different attributes.
+- Bad schemas are possible, and defining schemas is a crucial part of database (use) design.
