@@ -1,4 +1,4 @@
-# 5. Database engine info
+# 5. Database Engine info
 #### Why do we need database engines?
 We need database engines for storage and access of data of the database.
 
