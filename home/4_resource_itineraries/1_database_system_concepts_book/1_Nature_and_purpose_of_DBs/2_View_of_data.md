@@ -1,4 +1,7 @@
 # 2. View of data
+18 April 2022
+- [ ] in vault
+
 - A **major purpose** of a database system is to provide users with an *abstract* view of the data. 
 - Abstract view means that the users shouldn't have to worry about the low level data structures, algorithms and details of the programs of the database system, i.e. how the data is stored and maintained should be abstracted away.
 

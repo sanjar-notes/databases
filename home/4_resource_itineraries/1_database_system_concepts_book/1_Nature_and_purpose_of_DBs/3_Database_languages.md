@@ -1,4 +1,7 @@
 # 3. Database languages
+18 April 2022
+- [ ] in vault
+
 #### Why database languages
 - Manipulation (including access) to a database needs a uniform language. The goal is to allow humans to interact efficiently with the system.
 - A query is a statement requesting retrieval of information.
