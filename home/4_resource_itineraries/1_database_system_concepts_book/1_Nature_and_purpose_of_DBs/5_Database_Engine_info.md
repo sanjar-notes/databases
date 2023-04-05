@@ -7,7 +7,7 @@ Database engine is just a fancy name for software that manages storage and acces
 
 
 #### Components of a database engine
-They can be broadly divided into 3:
+They can be broadly divided into 2:
 1. Storage manager - manages storing of database data in parts.
 	- Important because databases typically require a large amount of storage space - even upto Petabytes (i.e. 1024 Terabytes).
 	- Since the main memory of a machine is negligible compared to database size, data is stored on disk. Data is moved between main memory and disk as needed.
@@ -19,6 +19,7 @@ They can be broadly divided into 3:
 
 - While database engines where traditionally centralized computer systems, today parallel processing is key for handling very large amounts of data efficiently.
 - Modern database engines pay a lot of attention to parallel data storage and parallel query processing.
+- Distributed databases allow data storage and query processing across multiple geographically separated machines.
 
 
 #### Component 1 - Storage manager
