@@ -1,8 +1,8 @@
 # 8. History of database systems
 Created Wednesday 5 April 2023 at 01:08 pm
 
-/rough
 - Information processing drives growth and use of computers
+
 ## 1950s and early 1960s - Magnetic tapes were used for storing data.
   - The primary problem with this was "sequentiality" of reads, writes.
   - The "sequentiality" and slow speeds negatively affected the design of software.
