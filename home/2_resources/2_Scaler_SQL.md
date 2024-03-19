@@ -14,7 +14,7 @@ Takes 18 3hr sessions. 2 weeks including weekends if doing only SQL
 
 1. [ ] \[1h 52m] Introduction
     1. [x] \[6 min] Introduction to the DBMS Course
-    2. [ ] \[31 min] Why not simply use files: Files vs DBMS
+    2. [x] \[31 min] Why not simply use files: Files vs DBMS
     3. [ ] \[35 min] Tables and Keys
     4. [ ] \[23 min] Integrity Constraints
     5. [ ] \[17 min] Solved problems
