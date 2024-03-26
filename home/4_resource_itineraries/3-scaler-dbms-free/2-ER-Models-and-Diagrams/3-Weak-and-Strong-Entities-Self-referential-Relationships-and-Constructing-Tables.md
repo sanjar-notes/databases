@@ -1,0 +1,1 @@
+resume from video start https://www.scaler.com/topics/course/dbms/video/467/

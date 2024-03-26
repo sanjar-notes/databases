@@ -71,4 +71,7 @@ OTH, partial participation means that for the entity, not every of its instance 
 Example: employee and teams entity with manages relations.
 ![](../../../../assets/1-Introduction-to-ER-diagrams-image-6-6718f520.png)
 
+Total is represented by double lines with no arrows on either side.
+Partial participation is a single line (with an arrow).
+
 Total/partial participation can be seen as user-defined integrity constraints.
