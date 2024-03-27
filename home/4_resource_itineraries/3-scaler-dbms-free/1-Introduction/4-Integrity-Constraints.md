@@ -1,11 +1,11 @@
 # 4. Integrity Constraints
 Created Fri Mar 22, 2024 at 7:27 AM
 
-Integrity constraints. These are rules that must always be satisfied throughout the database (and all tables) for the system to be considered "consistent".
+Integrity constraints are rules that must always be satisfied throughout the database (and all tables), at all times, for the system to be considered "consistent". Being "consistent" is usually a strict minimum requirement.
 
 The advantage and use of these rules is that they avoid inconsistencies and also promote a logical and simple structure.
 
-The rules are:
+The rules to satisfy are:
 1. Entity integrity - every table must have a primary key, and the key must be unique and not null.
 2. Domain integrity - the domain (math) of all values an attribute can have. The rule is that this must be defined and known.
 3. User-defined integrity - constraints relating to business logic of the app/system that the db is being used for. From a math perspective these are arbitrary. Example: Amazon purchases table where product count has a max limit of 4, to avoid "by-all-and-resell-elsewhere" problem. aka 'CHECK constraint'
