@@ -6,7 +6,7 @@ Resume from video start https://www.scaler.com/topics/course/dbms/video/464/
 - aka ER models or ER diagrams
 
 ## Purpose of ER diagrams
-The purpose of ER diagram is to represent a high level picture of the database in its *entirety*. It is a exhaustive document.
+The purpose of ER diagram is to represent a high level picture of the database in its *entirety*. It is an exhaustive document.
 
 By database here, we mean tables, keys and integrity constraints of the database.
 
@@ -28,9 +28,9 @@ In natural terms, attribute are nouns.
 ### Types of attributes
 1. simple attribute - *represented using a ellipse.*
 2. Key attributes - i.e. attribute that's the PK of the entity's corresponding table. *Represented using a circle with label underlined.*
-3. Multi-valued attributes - i.e. an attribute that has multiple values (i.e. array). Example: Customer entity's credit_card_id and phone_number attributes, since a customer may have multiple credit cards and phone numbers. Another possible way to understand this is an entity has multiple attributes of the same kind. *Represented by double ellipses.*
-4. Derived attributes - an attribute that can be derived/computed using existing concrete attribute(s). *Represented using a dotted ellipse*. Example: age is a derived attribute assuming DOB concrete attribute exists
-5. Compound attribute - an attribute could be broken down into multiple attributes. Such a divisble attribute is a compound attribute. Example: fullName is a compound attribute that can be broken into first, middle and last name. Another example is address, which can be broken into street, city, state, country attributes. *Compond attribute is represented automatically by showing branches coming out of the where each branch is a simple attribute*
+3. Multi-valued attributes - i.e. an attribute that has multiple values (i.e. array if entity is represented as JS object). Example: Customer entity's credit_card_id and phone_number attributes, since a customer may have multiple credit cards and phone numbers. Another possible way to understand this is an entity has multiple attributes of the same kind. *Represented by double ellipses.*
+4. Derived attributes - an attribute that can be derived/computed using existing concrete attribute(s). *Represented using a dotted ellipse*. Example: age is a derived attribute assuming DOB concrete attribute exists. The compute to derive should be deterministic and O(1)? (CHECK)
+5. Compound attribute - an attribute could be broken down into multiple attributes. Such a divisible attribute is a compound attribute. Example: fullName is a compound attribute that can be broken into first, middle and last name. Another example is address, which can be broken into street, city, state, country attributes. *Compound attribute is represented automatically by showing branches coming out of the where each branch is a simple attribute*
 
 ![](../../../../assets/1-Introduction-to-ER-diagrams-image-1-6718f520.png)
 
