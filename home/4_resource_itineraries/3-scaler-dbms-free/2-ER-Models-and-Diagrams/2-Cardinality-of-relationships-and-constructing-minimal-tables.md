@@ -28,7 +28,7 @@ We'll use this:
 - many side - simple line with variable as label
 - Double lines means total, single line means partial participation
 ![](../../../../assets/2-Cardinality-of-relationships-and-constructing-minimal-tables-image-2-6718f520.png)
-## Constructing tables from ER diagrams*, using general algorithm and cardinality-participation value*
+## ER2T - Constructing tables from ER diagrams*, using general algorithm and cardinality-participation value*
 During transformation, we need to take care/consider 3 things:
 - cardinality
 - participation
@@ -37,7 +37,7 @@ During transformation, we need to take care/consider 3 things:
 The following are a exhaustive set of rules that help in constructing proper tables. how to use? Just try to create tables and also satisfy the rules at the same time. The rules get satisfied at a certain point, stop there, you are done.
 
 Steps:
-1. Given a ER diagram, find its cardinality and participation values of entities, and then transform the diagram into a table using a general algorithm.
+1. Given a ER diagram, find its cardinality and participation values of entities, and then transform the diagram into a tables.
 2. Try to store *all* data in tables and make sure all criteria are satisfied.
 3. Use set theoretic notation.
 
@@ -50,6 +50,7 @@ note:
 - I already guessed point 3. Also point 2 makes sense and point 1 in general makes sense, i.e. we don't instantiate tables quickly, nor do we store arrays in a cell (column). Scaling should not be done using these approaches. WHY?
 - Generally 3 tables can handle almost everything, since the middle table also has a PK. The usual fight is of disproving 1 is enough, 2 isn't enough.
 - Don't worry about both side FK/PKs if the FK is unique (binary search is possible). one side is enough as long as the link exists and all data is captured.
+- For personal naming, I'll name this algorithm ER2T
 
 
 ## Constructing table example problems
