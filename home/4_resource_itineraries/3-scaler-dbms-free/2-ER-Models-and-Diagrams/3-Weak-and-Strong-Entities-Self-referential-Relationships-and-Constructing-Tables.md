@@ -14,19 +14,19 @@ All examples until now were strong entities.
 - A weak relation is the relation between a weak entity and it's "owner" strong entity.
 - The ER2T algorithm stays the same even for ER diagrams having weak entities.
 
-**Example**: Amazon has customers. And customer can create "family accounts". In this example, the names of family members are assumed to be unique. But globally viewed, the `name` key is not a primary key (because it is not unique globally - i.e. two customers may have family members with the same name).
+**Example**: Amazon has customers. And a customer can create "family accounts". In this example, the names of family members are assumed to be unique. But globally viewed, the `name` key is not a primary key (because it is not unique globally - i.e. two customers may have family members that happen to have same name).
 
-- *Note about doubt:* the name could have been considered primary key, if we had a dedicated table per customer for their family accounts, i.e. number of accounts table === number of customers. But this violates the ER2T rule of having minimum number of tables. This means all family accounts of all customers would typically be saved in the same table. And if all accounts are in the same table, then `name` is not longer guaranteed to be unique. Cool. Furthermore, the PK of the accounts table would be a compound key consisting of (customerId, name), which, would be unique.
+- *Note about doubt:* the name could have been considered primary key, if we had a dedicated table per customer for their family accounts, i.e. number of family account tables === number of customers. But this violates the ER2T rule of having minimum number of tables. This means all family accounts of all customers would typically be saved in the same table. And if all accounts are in the same table, then `name` is not longer guaranteed to be unique. Cool. Furthermore, the PK of the family accounts table would be a compound key consisting of (customerId, name), which, would be unique.
 - GUESS: weak entities can be used to model tree (i.e. parent and children) type of relation.
 
 ![](../../../../assets/3-Weak-and-Strong-Entities-Self-referential-Relationships-and-Constructing-Tables-image-1-6718f520.png)
 
 ## Doing ER2T for weak entities
-The general algorithm, i.e.ER2T remains the same.\ 
+The general algorithm, i.e.ER2T remains the same. 
 
 Note: 
-- We can utilize existing table count values for combinations of cardinality, participation to quickly answer what a new attached block can do, don't need to do from scratch.
-- As can be seen here, appending a new block (E3) is simple to calculate, since it only interacts with the connecting block (E2 here).
+- We can reuse existing table results (values for combinations of cardinality), to quickly answer what happens when a new block is attached to a relation, so we don't have to work it out from scratch.
+- As can be seen here, *appending* a new block (E3) is simple to calculate, since it only interacts with the connecting block (E2 here).
 ![](../../../../assets/3-Weak-and-Strong-Entities-Self-referential-Relationships-and-Constructing-Tables-image-2-6718f520.png)
 
 
@@ -35,16 +35,23 @@ Note:
 Example: Employee manages employee, or in other words, all employees have a manager. 
 
 ### One-one self relation
-Srikant claims 1 table is enough. It is, but only if you are willing to repeat the same type of non-PK columns once. i.e. A2 and A2' are of the same type. Another qualm I have is that A2's data is stored redundantly.
 
-Ok, strictly speaking, ER2T does not care about column redundancy, so this is fine.
-Ok 1 table.
+One table is enough.
+
+Doubt:  
+- > Srikant claims 1 table is enough. It is, but only if you are willing to repeat the same type of non-PK columns once. i.e. A2 and A2' are of the same type. Another qualm I have is that A2's data is stored redundantly.
+  Ok, strictly speaking, ER2T does not care about column redundancy, so this is fine.
+  
+  The problem is I'm thinking of representing "manages" and "managed-by" (which is what we do to avoid array cell values) at the same time explicitly. But there's no need for it, information wise, because the information is captured just fine even if only "managed-by" is focused on. Because both are equivalent, because on leads to the other question. *This is fine performance wise too, since in any solution, we will have to traverse rows, unless we are fine with storing an array as cell value*. The non-participating or one side instances here will have NULL values. Size of table is n.
+
+
+
 ![](/assets/3-Weak-and-Strong-Entities-Self-referential-Relationships-and-Constructing-Tables-image-3-6718f520.png)
 
 ### One-many self relation 
-1 table. See how: make set theoretic notation, then name columns A1, A2 and right side set columns A1' and A2'. So eventually, the one side becomes PK. The non-participating rows can also be seen as being on the one side. And that's it, we're done.
+1 table. See how: make set theoretic notation, then name columns A1, A2 and right side set columns A1' and A2'. So eventually, the many side becomes PK (although it's the same kind of attribute as). The non-participating rows can also be seen as being on the many side, but just not participating. And that's it, we're done.
 
-note: this too has the problem of redundant data for the many side rows.
+note: ~~this too has the problem of redundant data for the many side rows.~~ doubt cleared above. This is correct.
 
 ![](../../../../assets/3-Weak-and-Strong-Entities-Self-referential-Relationships-and-Constructing-Tables-image-4-6718f520.png)
 
