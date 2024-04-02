@@ -19,6 +19,8 @@ A key is a *minimal set* of attributes to uniquely identify a row.
 
 Example: In the customers table, customerId is a key. But \[customerId, customerName] is not a key, because it is not "minimum" even if it's still unique. Something like \[CustomerName, CustomerAddress] is most likely a key, since people with the same names usually don't live at the same place.
 
+A key has to be unique among rows, but can be NULL (multiple NULLs are also fine).
+
 Some terms:
 - Simple key - a key with only one attribute. Example: customerId
 - Compound key - a key with multiple attributes. Example: \[CustomerName, CustomerAddress]
