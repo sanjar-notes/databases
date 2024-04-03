@@ -15,18 +15,18 @@ Takes 18 3hr sessions. 2 weeks including weekends if doing only SQL
 1. [ ] \[1h 52m] Introduction
     1. [x] \[6 min] Introduction to the DBMS Course
     2. [x] \[31 min] Why not simply use files: Files vs DBMS
-    3. [ ] \[35 min] Tables and Keys
-    4. [ ] \[23 min] Integrity Constraints
-    5. [ ] \[17 min] Solved problems
+    3. [x] \[35 min] Tables and Keys
+    4. [x] \[23 min] Integrity Constraints
+    5. [x] \[17 min] Solved problems
 2. [ ] \[2h 13m] ER Models and Diagrams
-    1. [ ] \[37 min] Introduction to ER diagrams
-    2. [ ] \[60 min] Cardinality of relationships and constructing minimal tables
-    3. [ ] \[19 min] Weak and Strong Entities, Self-referential Relationships, and Constructing Tables
-    4. [ ] \[17 min] Solved Problems - ER Models
+    1. [x] \[37 min] Introduction to ER diagrams
+    2. [x] \[60 min] Cardinality of relationships and constructing minimal tables
+    3. [x] \[19 min] Weak and Strong Entities, Self-referential Relationships, and Constructing Tables
+    4. [x] \[17 min] Solved Problems - ER Models
 3. [ ] \[54m] Introduction to Relational Models
-    1. [ ] \[16 min] Mathematical model of Tables
-    2. [ ] \[27 min] ER-Relational Model, Constraints and Keys (recap)
-    3. [ ] \[11 min] Solved Problems - Relational Models
+    1. [x] \[16 min] Mathematical model of Tables
+    2. [x] \[27 min] ER-Relational Model, Constraints and Keys (recap)
+    3. [x] \[11 min] Solved Problems - Relational Models
 4. [ ] \[1h 46m] Relational Algebra
     1. [ ] \[42 min] Introduction to Relational Algebra and Basic Operators
     2. [ ] \[41 min] Joins and Division Operators
