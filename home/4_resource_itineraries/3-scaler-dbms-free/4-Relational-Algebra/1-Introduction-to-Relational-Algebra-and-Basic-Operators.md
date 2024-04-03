@@ -19,9 +19,9 @@ We'll also learn about some "Querying languages".
 Query languages are tools to obtain data from DBMS.
 
 Some of these are *like* programming languages while others are like a mathematical language. We'll learn about 3 querying languages:
-- Relational algebra - based on set theory
+- Relational algebra - based on set theory. It's a procedural language.
 - Tuple relational calculus - based on proposition/predicate logic
-- SQL - is *like* a programming language, used directly in the real world
+- SQL - is *like* a programming language, used directly in the real world. It's an imperative language.
 
 ## Procedural vs Declarative languages
 - Procedural - C/C++/Java. Here we provide very clear and minute instructions. aka *we code the what and the how*.
@@ -36,7 +36,8 @@ These operators are called like so because they operate on relations/tables.
   ![](../../../../assets/1-Introduction-to-Relational-Algebra-and-Basic-Operators-image-2-276a499c.png)
 2. Selection &Sigma; - also a unary operator, it takes a relation and a condition as input, and outputs elements of the relation (i.e. rows of the table) that satisfy the input condition.
 	  - memory aid: Sigma starts with S, Selection starts with S
-	  - The conditional can be any propositional logic - AND, OR and NOT. But predicates, FOR-ALL, SOME are not allowed (CHECK?! about for-all and some).
+	  - The conditional can be any propositional logic - AND, OR and NOT. But predicates, FOR-ALL, SOME are not allowed (CHECK?! about for-all and some). 
+	  - The statements in the condition can use common relational operators like =, !=,  \>, \< and are usually between column values (this is usually used when operand is actually a cartesian product of two tables, i.e. R.c1 < S.c2 notation, of course, selection by itself is still unary).
 	![](../../../../assets/1-Introduction-to-Relational-Algebra-and-Basic-Operators-image-3-276a499c.png)
 
 	- Projection and Selection may be done in series. Like so:
@@ -57,10 +58,14 @@ These operators are called like so because they operate on relations/tables.
 	- Difference (A-B) - a table of rows that are only present in A.
 	  ![](../../../../assets/1-Introduction-to-Relational-Algebra-and-Basic-Operators-image-7-276a499c.png)
 	  
-	- Cartesian-product (an operator) - a binary operator that takes relations as input, and outputs a relation with all attributes of the inputs (even if duplicate attributes, keep them) and all possible rows combination (of the existing rows of inputs). This is possible because relations are sets too. The input relations can be incompatible (i.e. have different attributes/schema)
+	- Cartesian-product (an operator), i.e. A x B - a binary operator that takes relations as input, and outputs a relation with all attributes of the inputs (even if duplicate attributes, keep them) and all possible rows combination (of the existing rows of inputs). This is possible because relations are sets too. The input relations can be incompatible (i.e. have different attributes/schema)
 		![](../../../../assets/1-Introduction-to-Relational-Algebra-and-Basic-Operators-image-8-276a499c.png)
 		
 		Clear definition (below)
 		![](../../../../assets/1-Introduction-to-Relational-Algebra-and-Basic-Operators-image-9-276a499c.png)
 	- Number of elements for set operations
 		![](../../../../assets/1-Introduction-to-Relational-Algebra-and-Basic-Operators-image-10-276a499c.png)
+
+Note:
+- subset boolean check is not a propositional operator, since it involves a loop. CHECK!
+	- So avoid using subset boolean checks in selection conditions, keep it strictly propositional
