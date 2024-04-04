@@ -82,7 +82,7 @@ Proof: It holds true because a cartesian product holds all possible values, but 
 A little involved but fine.
 ![](../../../../assets/2-Joins-and-Division-Operators-image-9-276a499c.png)
 
-note: I wrote this using almost propositional (i.e. filter row in subset) logic. But that was not required, the above is strictly projectional (i.e. even the conditional of selection is not needed, let alone subset operator).
+note: I wrote this using almost predicate (i.e. filter row in subset) logic. But that was not required, the above is strictly propositional (i.e. even the conditional of selection is not needed, let alone subset operator).
 ## Complete set of operators
 A complete set of operators are a set of operators that can represent any relational operators in that language.
 
