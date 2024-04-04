@@ -52,13 +52,13 @@ These operators are called like so because they operate on relations/tables.
 		- Attribute type (i.e. domain) is same
 		- Attribute name is same. BTW, this can be fixed by renaming if only name is an incompatibility.
 		  ![](../../../../assets/1-Introduction-to-Relational-Algebra-and-Basic-Operators-image-6-276a499c.png)
-	- Complement is not used much. Definition is simple: universe - given, i.e. `cartesianProduct - givenRelation`
+	- Complement is not used much. Definition is simple: universe - given, i.e. `cartesianProductOfDomains - givenRelation`
 	- Union: a table with all rows (of given relations) combined. Duplicates are not present as usual.
 	- Intersection: a table with common rows.
-	- Difference (A-B) - a table of rows that are only present in A.
+	- Difference (A-B): a table of rows that are only present in A.
 	  ![](../../../../assets/1-Introduction-to-Relational-Algebra-and-Basic-Operators-image-7-276a499c.png)
 	  
-	- Cartesian-product (an operator), i.e. A x B - a binary operator that takes relations as input, and outputs a relation with all attributes of the inputs (even if duplicate attributes, keep them) and all possible rows combination (of the existing rows of inputs). This is possible because relations are sets too. The input relations can be incompatible (i.e. have different attributes/schema)
+	- Cartesian-product (an operator), i.e. A x B - a binary operator that takes relations as input, and outputs a relation with all attributes of the inputs (even if duplicate attributes, keep them) and all possible rows combination (of the existing rows of inputs). This is possible because relations are sets too. The input relations can be incompatible (i.e. have different attributes/schema). FYI: cross product can be done between different kinds of relations (i.e. even if they have different attributes).
 		![](../../../../assets/1-Introduction-to-Relational-Algebra-and-Basic-Operators-image-8-276a499c.png)
 		
 		Clear definition (below)
@@ -69,3 +69,4 @@ These operators are called like so because they operate on relations/tables.
 Note:
 - subset boolean check is not a propositional operator, since it involves a loop. CHECK!
 	- So avoid using subset boolean checks in selection conditions, keep it strictly propositional
+- All set operations on relations output a relation.

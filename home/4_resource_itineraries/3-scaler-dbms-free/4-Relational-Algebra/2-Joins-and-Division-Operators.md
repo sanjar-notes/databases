@@ -1,4 +1,4 @@
-# 2. Joins and Division Operators
+ # 2. Joins and Division Operators
 Created Thu Apr 4, 2024 at 12:59 AM
 
 ## Derived operators
@@ -32,7 +32,7 @@ A binary operator that takes two relations and a condition as input, and outputs
 ### 3. Left-outer join (A⟕B)
 A binary operator that takes two relations. Output is a relation with all rows from natural join but also includes rows of A that failed to join (didn't match with any row in B), with B attribute values set to NULL.
 
-Here final attributes = attributes(A) union attributes (B), i.e. duplicates are ignored (they don't matter, since it's a compute on top of natural join).
+Here final attributes = attributes(A) union attributes(B), i.e. duplicates are ignored (they don't matter, since it's a compute on top of natural join).
 
 It has a conditional version too, i.e. A⟕<sub>c</sub>B. The output here is same as left-outer join, but include rows only if they satisfy the condition.
 ![](../../../../assets/2-Joins-and-Division-Operators-image-3-276a499c.png)
@@ -69,6 +69,8 @@ Attribute, wise, the attribute of B are removed.
 This may be difficult to state. Lets walk through the following example, here relation R has many rows. But only some rows (like ones with cid 1) have all values the same and also cover all values of relation B (in the attribute of B). cid 4 does it too, so the final output is the table with cid, and rows 1, 4.
 ![](../../../../assets/2-Joins-and-Division-Operators-image-7-276a499c.png)
 
+Note:
+-  If the larger table is 2-attributed, and smaller is 1-attributed, then the definition of "division" in this case becomes very simple to state: "rows from one relation that are related to all values in another relation, with matching attribute, and then duplicates removed".
 ### Division property, of reverse operation on other side
 A constraint that is analogous to arithmetic exists for the division operator.
 The constraint is that if R/S is T, then R is a subset of T x S (cartesian product).
@@ -88,7 +90,7 @@ A complete set of operators are a set of operators that can represent any relati
 
 The ones in relational algebra are - union, difference, cartesian-product, projection and selection.
 
-i.e. this is the minimum set of relational algebra operators. e.g. intersection is not here, because it can be represented using union and difference (A - B = A U B - B).
+i.e. this is the minimum set of relational algebra operators. e.g. intersection is not here, because it can be represented using union and difference (A intersect B = A U B - (A - B) - (B-A)).
 
 
 ## Feedback
