@@ -20,8 +20,8 @@ Query languages are tools to obtain data from DBMS.
 
 Some of these are *like* programming languages while others are like a mathematical language. We'll learn about 3 querying languages:
 - Relational algebra - based on set theory. It's a procedural language.
-- Tuple relational calculus - based on proposition/predicate logic
-- SQL - is *like* a programming language, used directly in the real world. It's an imperative language.
+- Tuple relational calculus - based on proposition/predicate logic. It's a declarative language.
+- SQL - is *like* a programming language, used directly in the real world. It's a declarative language.
 
 ## Procedural vs Declarative languages
 - Procedural - C/C++/Java. Here we provide very clear and minute instructions. aka *we code the what and the how*.
