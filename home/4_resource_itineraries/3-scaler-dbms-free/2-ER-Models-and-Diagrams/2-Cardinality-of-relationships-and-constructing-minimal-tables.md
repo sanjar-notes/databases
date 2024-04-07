@@ -51,7 +51,7 @@ Steps:
 Satisfaction criteria:
 1. Minimize \# of tables. *Initially try to do it all in one table, if not possible create more tables and check, and continue like so*.
 2. Every table must have a primary key. It must be unqiue and not null. *Try to make attributes PK and see if they can be NULL or duplicated, if yes, consider another attribute for PK*.
-3. Each cell must not multiple values (i.e. array). The value can be NULL too, fine. *Make a relation table or try to create extra columns (if it scales).*
+3. A cell must not multiple values (i.e. array). The value can be NULL, fine. *Make a relation table or try to create extra columns (if it scales).*
 
 note: 
 - I already guessed point 3. Also point 2 makes sense and point 1 in general makes sense, i.e. we don't instantiate tables quickly, nor do we store arrays in a cell (column). Scaling should not be done using these approaches. WHY?

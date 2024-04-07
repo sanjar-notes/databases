@@ -23,9 +23,6 @@ A query in TRC is expressed/returned as set (see below), where `t` represents a 
 ![](../../../../assets/1-Tuple-Relational-Calculus-I-image-2-bb0f4323.png)
 The condition part contains operators from first-order-logic, viz AND, OR, NOT, there-exists, for-all, element-of.
 
-continue from https://www.scaler.com/topics/course/dbms/video/474/ (6:46)
-DRC?
-
 ## Examples of TRC queries
 1. Selection in relational algebra as TRC ![](../../../../assets/1-Tuple-Relational-Calculus-I-image-3-bb0f4323.png)
 2. Projection in relational algebra as TRC - the main point here is that there is no intuitive way to get only one attribute, instead of whole rows. But it's a valid operation.
@@ -45,7 +42,7 @@ DRC?
    Set difference - this is also easy, but a little tricky, so we want to write conditions on t, but don't want false conditions to be returned ..., so use a local variable for checking. This is needed since anything t interacts with (i.e. belongs to here) gets returned. Alternatively, "not belongs to" is also fine. But the previous is a little more clear.
    ![](../../../../assets/1-Tuple-Relational-Calculus-I-image-8-bb0f4323.jpg)
 7. Difference - see above
-8. Projection-Selection combination with a condition. The important part - here the condition is on a relation (bought), and since want all satisfiers, it's like a cartesian-product (or join, anything). So in TRC, consider all possibilities, and filter out where cid matches. The simple part - we need to find only CustId, so projection, in TRC, just use that inside the nested attribute on t, and only that will be returned.
+8. Projection-Selection combination with a condition. The important part - here the condition is on a relation (bought), and since want all satisfiers, it's like a cartesian-product (or join, anything is ok). So in TRC, consider all possibilities, and filter out where cid matches. The simple part - we need to find only CustId, so projection, in TRC, just use that inside the nested attribute on t, and only that will be returned.
    ![](../../../../assets/1-Tuple-Relational-Calculus-I-image-9-bb0f4323.jpg)
 
 ## Formulae/eqns in predicate logic
@@ -53,4 +50,3 @@ DRC?
 
 Note:
 - The notation ∀x P(x) is shorthand for P(x1) ^ P(x2) ^ P(x3). It is just an expression, i.e. A sentence ∀𝑥𝑃(𝑥) is true if and only if 𝑃(𝑥) is true no matter what value (from the universe of discourse) is substituted for 𝑥. Same goes for ∃𝑥𝑃(𝑥), but it is a chain of OR.
-- 

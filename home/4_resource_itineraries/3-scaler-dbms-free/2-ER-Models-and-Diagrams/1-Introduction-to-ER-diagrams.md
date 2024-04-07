@@ -36,7 +36,7 @@ In natural terms, attribute are *nouns*.
 
 ## What are relations
 Represented by a diamond shape that connects two or more entities.
-So a relation is a ways to connect multiple entities.
+So a relation is a way to connect multiple entities.
 
 Naturally speaking, a relation is a *verb*. Verb because there is some interaction/relation-colloquial between the objects.
 ![](../../../../assets/1-Introduction-to-ER-diagrams-image-2-6718f520.png)
@@ -46,7 +46,7 @@ Naturally speaking, a relation is a *verb*. Verb because there is some interacti
 ![](../../../../assets/1-Introduction-to-ER-diagrams-image-3-6718f520.png)
 
 ## Set-theoretic notation
-In addition to ER notation, an equivalent set notation exists for visualizing entities and relations and can be quite helpful when designing or analysing ER diagrams.
+In addition to ER notation, an equivalent set notation exists for visualizing entities and relations and can be quite helpful when designing or analyzing ER diagrams.
 
 It is especially helpful in relations - one-one, many-many relations.
 ![](../../../../assets/1-Introduction-to-ER-diagrams-image-4-6718f520.png)

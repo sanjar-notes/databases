@@ -24,7 +24,7 @@ A key has to be unique among rows, but can be NULL (multiple NULLs are also fine
 Some terms:
 - Simple key - a key with only one attribute. Example: customerId
 - Compound key - a key with multiple attributes. Example: \[CustomerName, CustomerAddress]
-- Primary key - a key that the DB-designer/DBA/dev *chooses* to maintain uniqueness among rows of a table.
+- Primary key - a key that the DB-designer/DBA/dev *chooses* (i.e. choice aka arbitrary) to maintain uniqueness among rows of a table.
 	- Very often a simple key is chosen as the primary key. 
 	- It is ensured that PK is not null and unique, reasonably so since it is like an identifier.
 	- There should be at-most one PK.

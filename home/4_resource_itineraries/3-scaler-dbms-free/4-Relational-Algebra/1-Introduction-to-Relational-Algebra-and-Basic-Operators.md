@@ -7,7 +7,7 @@ https://www.scaler.com/topics/course/dbms/video/471/
 Relational algebra is a mathematical concept. 
 It is built upon the concept of relations (tables).
 
-In this algebra operands are tables, and we do some operations on them.
+In this algebra operands are relations (tables), and we do operations on them.
 This is just like operators on sets and numbers, shown below.
 ![](../../../../assets/1-Introduction-to-Relational-Algebra-and-Basic-Operators-image-1-276a499c.png)
 
@@ -30,7 +30,7 @@ Some of these are *like* programming languages while others are like a mathemati
 ## Basic Relational operators
 These operators are called like so because they operate on relations/tables.
 
-1. Projection &Pi; - A unary operator that takes a relation (table) and a list (subset of attributes of the relation) as input, and outputs a relation containing only the attributes in the input list.
+1. Projection &Pi; - A unary operator that takes a relation (table) and a list (subset of attributes of the relation) as input, and outputs a relation containing only the attributes mentioned in the input list.
 	- memory aid: Pi starts with P, Projection starts with P
 	- Gotcha: if only one attribute is present in input list, and it's non-unique, then duplicate rows in the output will be discarded, i.e. final output cannot contain duplicate rows. This makes sense since a relation is a set, and so, duplicates are not allowed.
   ![](../../../../assets/1-Introduction-to-Relational-Algebra-and-Basic-Operators-image-2-276a499c.png)
@@ -52,7 +52,7 @@ These operators are called like so because they operate on relations/tables.
 		- Attribute type (i.e. domain) is same
 		- Attribute name is same. BTW, this can be fixed by renaming if only name is an incompatibility.
 		  ![](../../../../assets/1-Introduction-to-Relational-Algebra-and-Basic-Operators-image-6-276a499c.png)
-	- Complement is not used much. Definition is simple: universe - given, i.e. `cartesianProductOfDomains - givenRelation`
+	- Complement is not used much. Definition is simple: universe - given, i.e. `cartesianProductOfDomains - givenRelation`. It's not used much because it's usually a very large universal set, usually an infinite set. Example: Customer table's complement is hard to define - is it all customers of all other companies, or people who will be born in the future, or people who were born long time back, not clear.
 	- Union: a table with all rows (of given relations) combined. Duplicates are not present as usual.
 	- Intersection: a table with common rows.
 	- Difference (A-B): a table of rows that are only present in A.

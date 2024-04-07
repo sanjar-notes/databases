@@ -7,17 +7,20 @@ resume from video start https://www.scaler.com/topics/course/dbms/video/467/
 ## Weak entities
 All examples until now were strong entities.
 
+A weak entity is an entity whose existence depends on pre-existence of some other entities.
+
 - A weak entity cannot exist on its own. It needs to have a unique and "owner" strong entity.
 	- This also means a weak entity participates totally with the "owner" strong entity.
 - Weak entities don't have a PK, but does have key attributes (i.e. attribute that has unique values)
+	- Since all weak entities (even those having different owner strong entity) are usually stored in one table, a PK is needed, this PK is usually a compound key - the PK of the related strong entity and their own key.
 - Weak entities are represented by double box.
-- A weak relation is the relation between a weak entity and it's "owner" strong entity.
 - The ER2T algorithm stays the same even for ER diagrams having weak entities.
 
 **Example**: Amazon has customers. And a customer can create "family accounts". In this example, the names of family members are assumed to be unique. But globally viewed, the `name` key is not a primary key (because it is not unique globally - i.e. two customers may have family members that happen to have same name).
 
 - *Note about doubt:* the name could have been considered primary key, if we had a dedicated table per customer for their family accounts, i.e. number of family account tables === number of customers. But this violates the ER2T rule of having minimum number of tables. This means all family accounts of all customers would typically be saved in the same table. And if all accounts are in the same table, then `name` is not longer guaranteed to be unique. Cool. Furthermore, the PK of the family accounts table would be a compound key consisting of (customerId, name), which, would be unique.
 - GUESS: weak entities can be used to model tree (i.e. parent and children) type of relation.
+- When to have weak entities - if you observe strong and permanent dependence, then the entity can be modeled as a weak entity. See [this](https://softwareengineering.stackexchange.com/a/178507)
 
 ![](../../../../assets/3-Weak-and-Strong-Entities-Self-referential-Relationships-and-Constructing-Tables-image-1-6718f520.png)
 
