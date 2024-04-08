@@ -31,13 +31,13 @@ Takes 18 3hr sessions. 2 weeks including weekends if doing only SQL
     1. [x] \[42 min] Introduction to Relational Algebra and Basic Operators
     2. [x] \[41 min] Joins and Division Operators
     3. [x] \[23 min] Solved Problems - Relational Algebra
-5. [ ] \[2h 4m] Relational Calculus
+5. [x] \[2h 4m] Relational Calculus
     1. [x] \[50 min] Tuple Relational Calculus-I
     2. [x] \[24 min] Safe queries & Domain Relational Calculus
     3. [x] \[17 min] Solutions-1
-    4. [ ] \[20 min] Solutions-2 (Monday)
-    5. [ ] \[13 min] Solutions-3 (Monday)
-6. [ ] \[1h 12m] SQL Introduction (Monday)
+    4. [x] \[20 min] Solutions-2 (Monday)
+    5. [x] \[13 min] Solutions-3 (Monday)
+6. [ ] \[1h 12m] SQL Introduction (~~Monday~~ Tuesday)
     1. [ ] \[22 min] Overview of Databases for learning SQL.
     2. [ ] \[15 min] Why learn SQL
     3. [ ] \[8 min] Execution of an SQL statement.
