@@ -28,7 +28,7 @@ Some terms:
 	- Very often a simple key is chosen as the primary key. 
 	- It is ensured that PK is not null and unique, reasonably so since it is like an identifier.
 	- There should be at-most one PK.
-- Candidate keys set - the set of *all unique* keys that are *possible* for the table.
+- Candidate keys set - the set of *all unique* keys that are *possible* for the table. Every candidate key is minimal, i.e. a subset of 
 - Entity integrity constraint - the fact that the above three conditions are satisfied.
 
 A subtle detail - PK cannot be null, but other candidate keys may have a null value. So this is the primary diff between PK and candidate keys.

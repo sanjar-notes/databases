@@ -1,6 +1,8 @@
 # 1. Tuple Relational Calculus I
 Created Fri Apr 5, 2024 at 1:32 AM
 
+Tuple relational calculus is also known as just "relational calculus".
+
 ### Comparison with other languages
 We have discussed about 3 querying languages:
 1. Relational algebra - Operators selection, projection, rename, set-difference, cartesian-product, natural-joins. It's a procedural.
