@@ -9,7 +9,7 @@ Created Tue Apr 9, 2024 at 6:55 PM
 ## `SHOW DATABASES`
 `SHOW DATABASES` is used to see all databases in the MySQL runtime (i.e. all databases on the machine).
 
-```sh
+```sql
 mysql> SHOW DATABASES;
 +--------------------+
 | Database           |
@@ -31,7 +31,7 @@ Switch to a database.
 ## `SHOW TABLES`
 Show all tables of the current database.
 
-```sh
+```sql
 mysql> SHOW TABLES;
 +------------------+
 | Tables_in_imdb   |
@@ -51,7 +51,7 @@ mysql> SHOW TABLES;
 ## `DESCRIBE {table_name}`
 This command shows the schema of the table, i.e. field names, types and some more metadata.
 
-```sh
+```sql
 mysql> DESCRIBE actors;
 +------------+--------------+------+-----+---------+-------+
 | Field      | Type         | Null | Key | Default | Extra |

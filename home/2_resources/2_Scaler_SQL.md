@@ -37,21 +37,21 @@ Takes 18 3hr sessions. 2 weeks including weekends if doing only SQL
     3. [x] \[17 min] Solutions-1
     4. [x] \[20 min] Solutions-2 (Monday)
     5. [x] \[13 min] Solutions-3 (Monday)
-6. [ ] \[1h 12m] SQL Introduction (~~Monday~~ Tuesday)
-    1. [ ] \[22 min] Overview of Databases for learning SQL.
-    2. [ ] \[15 min] Why learn SQL
-    3. [ ] \[8 min] Execution of an SQL statement.
-    4. [ ] \[12 min] IMDB dataset
-    5. [ ] \[11 min] Installing MySQL
-    6. [ ] \[4 min] Load IMDB data
-7. [ ] \[2h 22m] SQL Commands (Tuesday)
-    1. [ ] \[15 min] USE, DESCRIBE, SHOW TABLES
-    2. [ ] \[20 min] SELECT
-    3. [ ] \[10 min] LIMIT, OFFSET
-    4. [ ] \[7 min] Order By
-    5. [ ] \[10 min] Distinct
-    6. [ ] \[14 min] WHERE, Comparison operators, NULL
-    7. [ ] \[27 min] Logical Operators
+6. [x] \[1h 12m] SQL Introduction (~~Monday~~ Tuesday)
+    1. [x] \[22 min] Overview of Databases for learning SQL.
+    2. [x] \[15 min] Why learn SQL
+    3. [x] \[8 min] Execution of an SQL statement.
+    4. [x] \[12 min] IMDB dataset
+    5. [x] \[11 min] Installing MySQL
+    6. [x] \[4 min] Load IMDB data
+7. [x] \[2h 22m] SQL Commands (Tuesday)
+    1. [x] \[15 min] USE, DESCRIBE, SHOW TABLES
+    2. [x] \[20 min] SELECT
+    3. [x] \[10 min] LIMIT, OFFSET
+    4. [x] \[7 min] Order By
+    5. [x] \[10 min] Distinct
+    6. [x] \[14 min] WHERE, Comparison operators, NULL
+    7. [x] \[27 min] Logical Operators
     8. [ ] \[8 min] Aggregate Functions: COUNT, MIN, MAX, AVG, SUM
     9. [ ] \[13 min] GROUP BY
     10. [ ] \[14 min] HAVING
