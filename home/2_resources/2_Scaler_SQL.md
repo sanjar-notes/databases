@@ -52,7 +52,7 @@ Takes 18 3hr sessions. 2 weeks including weekends if doing only SQL
     5. [x] \[10 min] Distinct
     6. [x] \[14 min] WHERE, Comparison operators, NULL
     7. [x] \[27 min] Logical Operators
-    8. [ ] \[8 min] Aggregate Functions: COUNT, MIN, MAX, AVG, SUM
+    8. [x] \[8 min] Aggregate Functions: COUNT, MIN, MAX, AVG, SUM
     9. [ ] \[13 min] GROUP BY
     10. [ ] \[14 min] HAVING
     11. [ ] \[4 min] Order of keywords
