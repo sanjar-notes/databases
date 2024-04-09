@@ -23,6 +23,8 @@ So, without tech/computers, we tell stories (i.e. represent situations) about so
 
 Lets consider an alternative (to the above) story where we'd not need table, and try to think about a construct to represent it. So this story has objects, but only one instance of an object is present. The objects may relate to one another. This leads to the logical structure of a graph where nodes are objects and edges are relations, but, this graph is static, it never changes. So there's nothing to record or update here, i.e. it's not a data system (although it does capture non-zero information), i.e. there's nothing to manage/maintain here. *In short, this is a potentially boring story, and the real world does have a lot of multiplicity, and parts of it we're interested in are mostly not like this boring story, hence we need tables*.
 
+Knowing that tables help tell stories helps realize that DBMS and SQL may seem mechanical, but the end goal is to work with stories, so it's not a dry work or goal.
+
 ## Key
 A key is a *minimal set* of attributes to uniquely identify a row.
 
