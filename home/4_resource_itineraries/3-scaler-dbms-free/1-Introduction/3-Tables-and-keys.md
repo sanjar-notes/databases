@@ -14,6 +14,15 @@ There are many kinds of databases, including non-relational ones, like graph dat
 An actual instance (i.e. contains data) of a table = set of tuple/rows + a table structure
 
 
+## Why table
+Instead of thinking about data, programs or automation, lets think of how data is obtained.
+So, without tech/computers, we tell stories (i.e. represent situations) about something. And in a given story, there may be multiple instances of the same kind of thing (object). Also, these objects interact with each other. This effectively gives us the constructs of tables:
+1. Multiple instances of the same type of thing - represents linear repetition, i.e. table. Each instance becomes a row.
+2. Each object has certain inherent properties, these become attributes of that object's table.
+3. Since objects interact - with other types of object, or even with the same kind. That leads to links between tables.
+
+Lets consider an alternative (to the above) story where we'd not need table, and try to think about a construct to represent it. So this story has objects, but only one instance of an object is present. The objects may relate to one another. This leads to the logical structure of a graph where nodes are objects and edges are relations, but, this graph is static, it never changes. So there's nothing to record or update here, i.e. it's not a data system (although it does capture non-zero information), i.e. there's nothing to manage/maintain here. *In short, this is a potentially boring story, and the real world does have a lot of multiplicity, and parts of it we're interested in are mostly not like this boring story, hence we need tables*.
+
 ## Key
 A key is a *minimal set* of attributes to uniquely identify a row.
 
