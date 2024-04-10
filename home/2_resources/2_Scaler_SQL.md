@@ -53,22 +53,22 @@ Takes 18 3hr sessions. 2 weeks including weekends if doing only SQL
     6. [x] \[14 min] WHERE, Comparison operators, NULL
     7. [x] \[27 min] Logical Operators
     8. [x] \[8 min] Aggregate Functions: COUNT, MIN, MAX, AVG, SUM
-    9. [ ] \[13 min] GROUP BY
-    10. [ ] \[14 min] HAVING
-    11. [ ] \[4 min] Order of keywords
-8. [ ] \[35m] SQL Joins (Tuesday)
+    9. [x] \[13 min] GROUP BY (~~Tuesday~~ Wednesday)
+    10. [x] \[14 min] HAVING (~~Tuesday~~ Wednesday)
+    11. [x] \[4 min] Order of keywords (~~Tuesday~~ Wednesday)
+8. [ ] \[35m] SQL Joins (~~Tuesday~~ ~~Wednesday~~ Thursday)
     1. [ ] \[12 min] Join and Natural Join
     2. [ ] \[23 min] Inner, Left, Right and Outer joins
-9. [ ] \[24m] SQL Advanced Queries(Tuesday)
+9. [ ] \[24m] SQL Advanced Queries(~~Tuesday~~ Thursday)
     1. [ ] \[24 min] Sub Queries/Nested Queries/Inner Queries
-10. [ ] \[13m] SQL Data Manipulation Language (Tuesday)
+10. [ ] \[13m] SQL Data Manipulation Language (~~Tuesday~~ Thursday)
     1. [ ] \[7 min] INSERT
     2. [ ] \[6 min] UPDATE , DELETE
-11. [ ] \[19m] SQL Data Definition Language (Wednesday)
+11. [ ] \[19m] SQL Data Definition Language (Thursday)
     1. [ ] \[12 min] CREATE TABLE
     2. [ ] \[4 min] ALTER: ADD, MODIFY, DROP
     3. [ ] \[3 min] DROP TABLE, TRUNCATE, DELETE
-12. [ ] \[1h 9m] SQL Data Control Language (Wednesday)
+12. [ ] \[1h 9m] SQL Data Control Language (Thursday)
     1. [ ] \[11 min] Data Control Language: GRANT, REVOKE
     2. [ ] \[3 min] Learning resources
     3. [ ] \[26 min] Solved problems-1

@@ -14,10 +14,14 @@ The count 50,000 below is calculated using an aggregate function
 ![](../../../../assets/8-Aggregate-Functions-COUNT-MIN-MAX-AVG-SUM-image-1-90a59cee.png)
 ## Syntax
 ```sql
-SELECT aggregate_function (columnA) FROM table_name;
+SELECT aggregate_function(columnA) FROM table_name;
 
 -- specifically, the syntax is
-SELECT aggregate_function (columnA)
+SELECT aggregate_function(columnA)
+
+-- note: there should be no space between function and opening parentheses
+COUNT (year) ❌ -- syntax error
+COUNT(year)  ✅
 ```
 
 Examples:

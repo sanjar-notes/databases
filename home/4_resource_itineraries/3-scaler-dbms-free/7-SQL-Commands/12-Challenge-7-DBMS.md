@@ -1,0 +1,1 @@
+Do challenge https://www.scaler.com/topics/course/dbms/challenge/589057/challenge/
