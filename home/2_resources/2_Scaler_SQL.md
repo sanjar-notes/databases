@@ -56,9 +56,9 @@ Takes 18 3hr sessions. 2 weeks including weekends if doing only SQL
     9. [x] \[13 min] GROUP BY (~~Tuesday~~ Wednesday)
     10. [x] \[14 min] HAVING (~~Tuesday~~ Wednesday)
     11. [x] \[4 min] Order of keywords (~~Tuesday~~ Wednesday)
-8. [ ] \[35m] SQL Joins (~~Tuesday~~ ~~Wednesday~~ Thursday)
-    1. [ ] \[12 min] Join and Natural Join
-    2. [ ] \[23 min] Inner, Left, Right and Outer joins
+8. [x] \[35m] SQL Joins (~~Tuesday~~ ~~Wednesday~~ Thursday)
+    1. [x] \[12 min] Join and Natural Join
+    2. [x] \[23 min] Inner, Left, Right and Outer joins
 9. [ ] \[24m] SQL Advanced Queries(~~Tuesday~~ Thursday)
     1. [ ] \[24 min] Sub Queries/Nested Queries/Inner Queries
 10. [ ] \[13m] SQL Data Manipulation Language (~~Tuesday~~ Thursday)
