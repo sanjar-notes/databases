@@ -84,10 +84,32 @@ SELECT year, AVG (rankscore) FROM movies GROUP BY year; -- grouping and aggregat
 ```
 
 
-## Conclusion
-*Use SQL `GROUP BY` if you want to calculate values of groups (exclusive groups) formed from a table*.
+## `GROUP BY` multiple columns
+This is not something very different or fundamental. 
+We use "concatenated value" of columns as the grouping criteria, instead of just one column.
 
-You'll need to provide grouping column, as well as the aggregate function.
+Syntax:
+```sql
+SELECT columnA, columnB, AggregateFunction(columnC)
+FROM table_name 
+GROUP BY columnA, columnB;
+
+
+-- general syntax will be
+SELECT columnA, columnB ..., AggregateFunction(ColumnAA)
+FROM table_name
+GROUP BY columnA, columnB ...;
+```
+
+For clarity, lets consider the internal steps of `GROUP BY`:
+1. Grouping - grouping is now done based on "{columnA} {columnB}"
+2. Aggregate - aggregate is done on groups' rows, as usual (they are still rows from the source table)
+
+## Conclusion
+*Use SQL `GROUP BY` if you want to calculate values of groups (exclusive groups) in a table*.
+
+You'll need to provide grouping column, as well as the aggregate function. Grouping is based on equality/similarity.
+
 Also, SQL does not return group's rows and the groups are mutually exclusive, so SELECT columns have just one aggregate column.
 
 Start https://www.scaler.com/topics/course/dbms/video/493/
