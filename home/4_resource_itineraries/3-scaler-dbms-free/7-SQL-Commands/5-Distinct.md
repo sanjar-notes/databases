@@ -18,7 +18,7 @@ Note:
 - practical usage - suppose all rows in the UI listing have value for a certain column, and we wish to add a filter for that attribute. Then `SELECT DISTINCT` can be used to generate the entries of this filter (assume it's a dropdown).
 
 ## `SELECT DISTINCT` with multiple columns
-`SELECT DISTINCT` allows dedup w.r.t multiple columns. But be careful, the dedup that happens here is w.r.t the "concatenated" value of the columns, i.e. rows can have duplicates for one column. But the whole set of columns specified will never repeat.
+`SELECT DISTINCT` allows dedup w.r.t multiple columns. But be careful, the dedup that happens here is w.r.t the "concatenated" (actually series of equalities) value of the columns, i.e. rows can have duplicates for one column. But the whole set of columns specified will never repeat.
 
 See explanation below (this output is valid, even though first_name is repeated if seen in isolation)
 ![](../../../../assets/5-Distinct-image-1-90a59cee.png)

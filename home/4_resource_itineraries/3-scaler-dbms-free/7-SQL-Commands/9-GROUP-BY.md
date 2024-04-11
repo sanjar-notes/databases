@@ -86,7 +86,7 @@ SELECT year, AVG (rankscore) FROM movies GROUP BY year; -- grouping and aggregat
 
 ## `GROUP BY` multiple columns
 This is not something very different or fundamental. 
-We use "concatenated value" of columns as the grouping criteria, instead of just one column.
+We use "serial matching" (i.e. concatenated value or concatenated similarity hashes) of columns as the grouping criteria, instead of just one column.
 
 Syntax:
 ```sql
