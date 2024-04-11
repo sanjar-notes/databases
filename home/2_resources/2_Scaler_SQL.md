@@ -59,8 +59,8 @@ Takes 18 3hr sessions. 2 weeks including weekends if doing only SQL
 8. [x] \[35m] SQL Joins (~~Tuesday~~ ~~Wednesday~~ Thursday)
     1. [x] \[12 min] Join and Natural Join
     2. [x] \[23 min] Inner, Left, Right and Outer joins
-9. [ ] \[24m] SQL Advanced Queries(~~Tuesday~~ Thursday)
-    1. [ ] \[24 min] Sub Queries/Nested Queries/Inner Queries
+9. [x] \[24m] SQL Advanced Queries(~~Tuesday~~ Thursday)
+    1. [x] \[24 min] Sub Queries/Nested Queries/Inner Queries
 10. [ ] \[13m] SQL Data Manipulation Language (~~Tuesday~~ Thursday)
     1. [ ] \[7 min] INSERT
     2. [ ] \[6 min] UPDATE , DELETE

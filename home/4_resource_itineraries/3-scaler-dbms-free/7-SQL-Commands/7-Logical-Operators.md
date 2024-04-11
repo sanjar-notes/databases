@@ -35,9 +35,11 @@ Note:
 - This is a short-form for two comparison statements: `columnA >= lowValue AND columnA <= highValue`
 
 ### `IN` (set membership)
-Check if value is in a set (i.e. list)
+Check if value is in a set (i.e. list). The list can be comma-separated or even a result set (but it should have only one column).
 ```sql
 SELECT * FROM table_name WHERE columnA IN ('value1', 'value2', 'value3');
+
+SELECT * FROM table_name WHERE columnA IN (resultSetWithOneColumn);
 
 -- specifically, condition syntax is
 columnA IN ('value1', 'value2', 'value3');
