@@ -23,7 +23,7 @@ Note:
 - The order of where `WHERE` appears in the query is important. It should appear just after the `FROM`, otherwise we get a syntax error. (WHY!)
 
 ## `WHERE` conditions
-- Condition outputs can be TRUE, FALSE or NULL
+- Condition outputs can be TRUE, FALSE or NULL, and these are usable [literals](https://dev.mysql.com/doc/refman/8.0/en/boolean-literals.html) too.
 - Allowed operators: =, <, >, <=, >=, != (aka <>)
 - Strings and other non-numbers can use =, != (aka <>) just fine.
 - =, != (aka <>) don't work with NULL value, i.e. `=NULL`, `!=NULL` won't work. Have to use `IS NULL` and `IS NOT NULL` to do the comparison successfully.

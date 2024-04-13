@@ -16,7 +16,7 @@ If you give the sensibility criteria, the following are possible:
 - `FULL OUTER JOIN` - keep sensible rows as well as all unmatched columns from A and B (fill holes with NULL). A union B in Venn diagram. *This is not available in MySQL*
 
 ## More operations
-- `CROSS JOIN` - cartesian product
+- `CROSS JOIN` - cartesian product. Comma separated tables also mean `CROSS JOIN`
 - Self join - not a keyword, but you just use the same table as join inputs.
 
 ## JOIN multiple tables
@@ -45,3 +45,6 @@ I'll stick to this one-at-a-time approach since it's clearer.
 - Joins can become too expensive, especially if indexing is absent/improper.
 - Joins are usually the most time consuming jobs in a system. This matters in systems where latency is required
 - Engineers usually try to avoid using joins, or make them faster using indexes.
+
+## Recap joins
+![](../../../../assets/2-Inner-Left-Right-and-Outer-joins-image-2-b8704d7f.svg)

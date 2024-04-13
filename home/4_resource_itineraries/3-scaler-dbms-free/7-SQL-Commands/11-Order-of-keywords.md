@@ -20,7 +20,7 @@ Note:
 A SQL query executes its statements in the following order:
 
 1. FROM / JOIN - *makes sense, determine source(s), including making source by combining individual sources*
-2. WHERE *makes sense, general filter removes unnecessary rows at the begininng itself*
+2. WHERE *makes sense, general filter removes unnecessary rows at the beginning itself*
 3. GROUP BY - *makes sense, group (reduce) should happen after filter*
 4. HAVING - *makes sense, this is a filter that works with group by only, but it's still a filter, so should happen early (but after group by)*
 5. SELECT - *makes sense, decide column (i.e. discard info), only after all filter, aggregates are done*

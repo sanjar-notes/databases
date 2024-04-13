@@ -84,6 +84,8 @@ mysql> SELECT COUNT(year) FROM movies;
 1 row in set (0.09 sec)
 ```
 
+Note: 
+- aggregate functions ignore NULL values
 
 ## Aggregate functions
 The aggregate functions are:

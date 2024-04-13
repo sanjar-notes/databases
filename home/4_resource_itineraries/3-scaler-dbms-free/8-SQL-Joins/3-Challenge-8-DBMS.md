@@ -7,7 +7,7 @@ Created Thu Apr 11, 2024 at 5:06 PM
    - [ ] Natural Join
    - [ ] Inner Join ✅ 
    - [ ] Outer Join
-         both are the same
+         both are the same, but should have chosen the most specific
 2. ✅ Which join type returns only the matched rows between two tables?
    - [x] Inner Join
    - [ ] Left Join

@@ -31,7 +31,7 @@ SELECT name, year, rankscore FROM movies WHERE year BETWEEN 1999 AND 2000;
 ```
 
 Note:
-- if lowValue is higher than highValue, you'll get empty result. This happens because this doesn't make any sense. There will be no warning/error here either, so be careful.
+- if lowValue is higher than highValue, you'll get empty result. This happens because it doesn't make any sense. There will be no warning/error here either, so be careful.
 - This is a short-form for two comparison statements: `columnA >= lowValue AND columnA <= highValue`
 
 ### `IN` (set membership)
@@ -77,7 +77,7 @@ More wildcard characters:
 
 note:
 - To match '%' or '\_' itself (i.e. literally), use backslash as escape character, i.e. `\%`, `\_`
-- Of course NOT LIKE is possible, but it's just a logical negation of LIKE. Example:
+- NOT LIKE is possible, i.e. it's a logical negation of LIKE. Example:
   ```sql
 	SELECT first_name, last_name
 	FROM actors 
@@ -85,10 +85,8 @@ note:
 
 	-- this is a valid query
 	```
-### others
-
+### Others `WHERE` features
 - EXISTS
-- 
 - SOME
 - EXISTS - quantifier, used in subqueries, will discuss ahead
 - ALL - quantifier, used in subqueries, will discuss ahead

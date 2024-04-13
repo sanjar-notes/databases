@@ -2,7 +2,7 @@
 Created Tue Apr 9, 2024 at 10:37 PM
 
 Suppose we want to build an app from the given IMDB databases.
-Lets try to learn SQL by solving some tasks that building an would involve.
+Lets try to learn SQL by solving some tasks that would usually be involved in building an app
 
 ## Task: List all movies
 - `SELECT * FROM table_name` prints all the columns (and all the rows) of the table.
@@ -51,4 +51,9 @@ mysql> SELECT * FROM actors LIMIT 2;
 ```
 
 ### Conclusion
-`SELECT` meant for projection (as defined in Relational algebra)
+`SELECT` is primarily meant for projection (as defined in Relational algebra)
+
+
+## Extra
+- [SQL keywords list](https://dev.mysql.com/doc/refman/8.0/en/keywords.html)
+- [SQL aliases](https://www.w3schools.com/sql/sql_alias.asp) are used to give a column, or a table a temporary name. It is used for referencing, concatenation. Syntax wise use `AS name` or just `[space] name`.

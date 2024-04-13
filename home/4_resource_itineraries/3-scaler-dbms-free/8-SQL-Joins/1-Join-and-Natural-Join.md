@@ -14,11 +14,13 @@ By default, all attributes from all tables are kept (they get concatenated). *Th
 ![](../../../../assets/1-Join-and-Natural-Join-image-1-b8704d7f.png)
 ## Syntax
 Specify the tables involved, and the sensibility criteria for them (cover all combinations).
-Also, since sensibility criteria involves value of different tables, it's usually preferred to alias table names. The `SELECT` part also uses these aliases.
+Also, since sensibility criteria involves value of different tables, it's usually preferred to have aliases for table names. The `SELECT` part also uses these aliases (yes right to left usage, ik).
 
 Join part of the code runs during `FROM` (i.e. sources step). The syntax is in line with this.
 ```sql
-SELECT m.name, g.genre FROM movies m JOIN movies_generes g ON m.id=g.movie_id;
+SELECT m.name, g.genre 
+FROM movies m JOIN movies_genres g 
+ON m.id=g.movie_id;
 
 -- specifically
 FROM (A JOIN B ON sensibility_expression)
@@ -67,7 +69,8 @@ You just need to specify the tables, SQL will do the rest (will set sensibility 
 SELECT * FROM table_1 NATURAL JOIN table_2; -- no criteria specificed, so same-named column is used as sensibility criteria
 ```
 
-In case of natural join, you don't need to specify anything except the table, or in the worst case, need to specify the column name (if it's different in both tables) using the `USING` keyword. `ON` is not needed in natural join.
+- In natural join, you don't need to specify anything except the table, or in the worst case, need to specify the column name (if it's different in both tables) using the `USING` keyword. `ON` is not needed in natural join.
+- The result set does not have duplicate columns for matching attributes, as usual join does. Makes sense since the join criteria itself is equality of common attributes.
 
 ## `USING` shorthand
 If you want to join tables with a column that's named the same, you can skip providing the sensibility expression, instead just provide the column name.
@@ -120,3 +123,6 @@ SELECT * FROM table_1 JOIN table_2 USING (columnA);
 Use joins to combine data stored in separate tables.
 
 Why do we have separated tables: to minimize redundancy, i.e. normalization results in separated tables.
+
+
+## Extras

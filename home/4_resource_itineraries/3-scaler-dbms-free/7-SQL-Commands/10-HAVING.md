@@ -21,7 +21,7 @@ Fundamentally, these steps happen, i.e. `GROUP BY` + 1 filter step:
 Since 3 steps, we need 3 inputs:
 1. Grouping column
 2. Aggregate function, w.r.t a column.
-3. Filter condition. Since aggregation is done already, we can filter only w.r.t the aggregate values. *So an using alias in the HAVING expression is a must.*
+3. Filter condition. Since aggregation is done already, we can filter only w.r.t the aggregate values. *So an using a alias in the HAVING expression is a must.*
 
 ```sql
 SELECT year, COUNT (year) movie_count FROM movies GROUP BY year HAVING movie_count > 1000;

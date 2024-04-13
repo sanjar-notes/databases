@@ -39,8 +39,8 @@ The JS's groupBy function is intuitive. It took some rows and grouped them w.r.t
 
 But SQL `GROUP BY` does this:
 ```js
-let result = Object.groupBy(inventory, (food) => food.type); // JS stops here, but SQL it yet to finish
-result = Object.keys(result).reduce((accum, items) => ({[key]: items.reduce(aggregateLogic)}), {});
+let result = Object.groupBy(inventory, (food) => food.type); // JS stops here, but SQL is yet to finish
+result = Object.entries(result).reduce((accum, ([key, items])) => ({[key]: items.reduce(aggregateLogic(items))}), {});
 
 /*
 if aggregate logic was COUNT, then the final result would be
@@ -54,19 +54,19 @@ if aggregate logic was COUNT, then the final result would be
 i.e. SQL `GROUP BY` does not return the rows in the groups, but an aggregate of such rows (per group).
 
 ## Syntax
-Since SQL `GROUP BY` is two operations - group and reduce in one. It needs two inputs - a column to group by and an aggregate function to perform the reduce operation.
+Since SQL `GROUP BY` is a two-step operations - group and reduce. It needs two inputs - a column to group by and an aggregate function to perform the reduce operation.
 
 ```sql
 SELECT AggregateFunction(columnB) FROM table_name GROUP_BY columnA;
 
--- the following is also possible since columnA is the group criteria, i.e. it's value is the same for a group's rows
+-- the following is also possible since columnA is the group criteria, i.e. it's value is the same for a group's rows (i.e. in a way it is preserved)
 SELECT columnA, AggregateFunction(columnB) FROM table_name GROUP_BY columnA;
 
 -- specifically,
-GROUP BY columnName;
+AggregateFunction(columnB) FROM table_name GROUP BY columnName;
 ```
 
-You can't have free columns (i.e. columns other than aggregate or group column).
+You can't have free columns (i.e. columns other than aggregate or grouping column) - reason is obvious, the rows are not present in groups, only the aggregate is.
 Also, since groups are mutually exclusive, there can only be one aggregate column. So there can be atmost 2 columns in a `GROUP BY` query.
 ```sql
 SELECT columnC, AggregateFunction(columnB) FROM table_name GROUP_BY columnA; -- error, grouped on A, aggregate values for groups generates on B, now there's no way to include C (unsolvable because groups have many rows, which value of C would you print??)
@@ -85,7 +85,7 @@ SELECT year, AVG (rankscore) FROM movies GROUP BY year; -- grouping and aggregat
 
 
 ## `GROUP BY` multiple columns
-This is not something very different or fundamental. 
+tldr, grouping criteria by multiple columns. This is not something very different or fundamental.
 We use "serial matching" (i.e. concatenated value or concatenated similarity hashes) of columns as the grouping criteria, instead of just one column.
 
 Syntax:

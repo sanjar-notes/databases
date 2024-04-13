@@ -2,7 +2,7 @@
 Created Tue Apr 9, 2024 at 3:51 PM
 
 ## SQL - why and what
-SQL is a standard way to query/obtain/add/delete/modify.
+SQL is a standard way to query/obtain/add/delete/modify. i.e. CRUD data.
 ![](../../../../assets/2-Why-learn-SQL-image-1-e7d6bdad.png)
 
 - SQL is powerful - the best data-scientists and engineers use SQL day-to-day to get their tasks done. i.e. it is simple enough and expressive to be used in day to day work

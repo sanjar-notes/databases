@@ -31,9 +31,12 @@ SELECT name, rankscore FROM movies LIMIT 20 OFFSET 40;
 
 -- same as (skipping and limiting, or limiting and skipping are equivalent)
 SELECT name, rankscore FROM movies OFFSET 40 LIMIT 20;
+
+-- think of it like so
+(SELECT name, rankscore FROM movies) OFFSET 40 LIMIT 20; -- order of keywords stop mattering
 ```
 
-The keywords don't collide because limit is considered at the end of the query execution cycle, since it's purely about max return count. So both queries the queries when compiled, will have the same internal code, and therefore, same result.
+The keywords don't collide because limit is considered at the end of the query execution cycle, since it's purely about max return count. So both queries the queries when compiled, will have the same internal code, and therefore, the same result.
 
 Since this is SQL we don't need to concern ourself with low level details of how to get the result. We just specify 'what' we want and we're done.
 
