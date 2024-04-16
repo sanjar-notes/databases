@@ -28,6 +28,8 @@ Switch to a database.
 
 ![](../../../../assets/1-USE-DESCRIBE-SHOW-TABLES-image-1-90a59cee.png)
 
+Note:
+- This is not a required thing, you can use dot notation. `SELECT * FROM db_name.table_name` works just fine, without any preamble.
 ## `SHOW TABLES`
 Show all tables of the current database.
 

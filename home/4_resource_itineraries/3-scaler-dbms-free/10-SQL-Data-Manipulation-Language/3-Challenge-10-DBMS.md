@@ -1,5 +1,4 @@
 # 3. Challenge 10 DBMS
-
 Created Sat Apr 13, 2024 at 1:42 PM
 
 1. ✅ What is the purpose of the INSERT statement in SQL?
