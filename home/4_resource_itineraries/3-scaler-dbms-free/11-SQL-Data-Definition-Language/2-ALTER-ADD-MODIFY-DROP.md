@@ -17,3 +17,4 @@ There are 3 kinds of [ALTER](https://dev.mysql.com/doc/refman/8.3/en/alter-table
    ```sql
    ALTER TABLE table_name DROP column_name; -- delete column
 	```
+4. Rename table `ALTER TABLE old_table_name RENAME new_table_name`
