@@ -1,3 +1,7 @@
+---
+tags:
+  - clone-table
+---
 # 2. UPDATE DELETE
 Created Sat Apr 13, 2024 at 1:45 PM
 
