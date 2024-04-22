@@ -1,3 +1,10 @@
+---
+tags:
+  - any
+  - all
+  - in
+  - B
+---
 # 1. Sub QueriesNested QueriesInner Queries
 Created Thu Apr 11, 2024 at 5:14 PM
 
@@ -84,7 +91,9 @@ Note:
 - `ALL` - return TRUE if the comparison is TRUE for ALL of the values in the column that the subquery returns
 - `IN` - return TRUE if the ~~comparison~~ (equality) is TRUE for ANY of the values in the column that the subquery returns. Difference between `IN` and `=ANY`, `IN` accepts both lists and result-set, but `=ANY` accepts only result sets.
 
-Both are O(n<sup>2</sup>) ops in general
+These are O(n<sup>2</sup>) ops in general, i.e. for each row of the main query, and for each row of the subquery.
+
+The main achievement of this feature is that it allows variables from the main query to be used in the subquery.
 
 ```sql
 SELECT *
@@ -110,7 +119,9 @@ WHERE (product_id, quantity) > ANY
 );
 -- SELECT ∗ FROM orders WHERE (product_id,quantity) is greater than any rows of subquery
 ```
-
+Note:
+- `ALL` over an empty result set, is TRUE.
+- `ANY` over an empty result set, is FALSE,
 ## `EXISTS`
 Checks if subquery is non-empty or not. Like a `.length` operator.
 If a subquery returns any rows at all, EXISTS subquery is TRUE, and NOT EXISTS subquery is FALSE.
