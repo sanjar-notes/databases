@@ -1,3 +1,8 @@
+---
+tags:
+  - ER2T
+aliases: []
+---
 # 2-Cardinality-of-relationships-and-constructing-minimal-tables. 
 Created Tue Mar 26, 2024 at 10:45 PM
 
