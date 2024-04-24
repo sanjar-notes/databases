@@ -75,10 +75,10 @@ Takes 18 3hr sessions. 2 weeks including weekends if doing only SQL
     4. [x] \[14 min] Solved Problems-2
     5. [x] \[15 min] Solved Problems-3
 13. [ ] \[4h 7m] Functional Dependencies and Decomposition (Wed)
-    1. [ ] \[9 min] Designing tables in a DB
-    2. [ ] \[35 min] Functional Dependencies
-    3. [ ] \[45 min] Attribute Closure, Keys and Solved problems
-    4. [ ] \[34 min] Functional Dependency Sets and Properties + Solved examples
+    1. [x] \[9 min] Designing tables in a DB
+    2. [x] \[35 min] Functional Dependencies
+    3. [x] \[45 min] Attribute Closure, Keys and Solved problems
+    4. [x] \[34 min] Functional Dependency Sets and Properties + Solved examples
     5. [ ] \[40 min] Minimal/Canonical Covers of FDs + solved problems (Thu)
     6. [ ] \[48 min] Decompositions with solved problems (Thu)
     7. [ ] \[36 min] Dependency preserving decomposition + solved examples (Thu)

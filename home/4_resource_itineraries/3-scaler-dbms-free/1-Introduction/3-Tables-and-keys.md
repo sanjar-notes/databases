@@ -39,14 +39,14 @@ Some terms:
 	- Very often a simple key is chosen as the primary key. 
 	- It is ensured that PK is not null and unique, reasonably so since it is like an identifier.
 	- There should be at-most one PK.
-- Candidate keys set - the set of *all unique* keys that are *possible* for the table. Every candidate key is minimal, i.e. a subset of 
+- Candidate keys set - the set of *all unique* keys that are *possible* for the table. Every candidate key is minimal, i.e. a subset of the candidate key won't be a key (i.e. not useful in uniquely determining a row). There can be multiple candidate keys for a given table.
 - Entity integrity constraint - the fact that the above three conditions are satisfied.
 
 A subtle detail - PK cannot be null, but other candidate keys may have a null value. So this is the primary diff between PK and candidate keys.
 
 - Alternative/secondary keys - candidate keys that are not PKs.
 - Relational schema - info about structure about all tables and integrity constraints that tables have to satisfy.
-- Super key - a compound key formed by combining candidate key and any other attribute(s). A set. mAID superset. Super key cannot be a null set.
+- Super key - a compound key formed by combining a candidate key and any other attribute(s). A set. mAID superset. Super key cannot be a null set. There can be multiple super keys for a given table.
 - Foreign key - an attribute in the current table that is a primary key in some other table. The other table may be the current table too (self referential).
 	- Concept wise, it acts as a pointer to a row in the other table. Example: customer and purchases table, where purchases table has customerId as a attribute.
 	- All foreign key values have to exist in the other table, this is checked during row creation in current table. 

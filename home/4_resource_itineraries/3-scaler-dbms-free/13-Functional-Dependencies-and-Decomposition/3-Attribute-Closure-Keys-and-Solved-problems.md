@@ -29,9 +29,9 @@ So attribute closure is used to *verify* claim of being super key. Does not help
 
 
 ## Candidate keys
-Recap what candidate keys are, they are a set of attribute such that no further strict subset from the given set, can be a super key. i.e. a candidate key is a minimal super key.
+Recap what candidate keys are, they are a set of attribute such that no strict subset from the given set, can be a super key. i.e. a candidate key is a minimal super key.
 
-How is attribute closure relevant here? Well, if you're given an attribute set X of relation R, and it is claimed X is a candidate key. To verify, we form subsets of X, and calculate "attribute closure" of the subsets. If any one of the output happens to be "all attributes of R", then it means X is not a candidate key. Otherwise X is indeed a candidate key.
+How is attribute closure relevant here? Well, if you're given an attribute set X of relation R, and it is claimed X is a candidate key. To verify, we form subsets of X, and calculate "attribute closure" of the subsets (strict subsets). If any one of the output happens to be "all attributes of R", then it means X is not a candidate key. Otherwise X is indeed a candidate key. Note that null set is neither a SK nor a CK.
 ![](../../../../assets/3-Attribute-Closure-Keys-and-Solved-problems-image-4-781b29bb.png)
 
 So attribute closure is used to *verify* claim of being candidate key. Does not help with *generation* directly.
@@ -53,11 +53,23 @@ Directly, this helps check what to use as PK, since PK is usually picked from th
 ## Prime attributes
 Assume you're given a set of attributes on R, and a candidate key (aka CK).
 
-Then the prime attributes of R is a set that has all attributes from the given candidate key, plus any other attributes that don't make the set a super key.
+Then the prime attributes of R is *a set* that has all attributes from the given candidate key, plus any other attributes that don't make the set a super key.
 
 Of course, primary attributes is a superset to candidate key.
 
 Q1: How would this be possible, isn't a candidate key minimal.
 A: yes, the candidate key is minimal. But it can happen that an attribute not mentioned in the CK determines an attribute present in it. In this case this unmentioned attribute gets to be included in the "primary attribute" set. *i.e. candidate keys plus stupid attributes (determining wise)*.
 
+Q2: This means prime attributes change w.r.t to candidate key in hand.
+A: Yes, since there can be multiple CKs for a table, that means there can be multiple prime-attribute-sets for a table. This is fine, since any of these is enough to be used for uniqueness. Think of it as multiple options to arbitrarily choose from.
+
 ![](../../../../assets/3-Attribute-Closure-Keys-and-Solved-problems-image-8-781b29bb.png)
+
+### Examples
+Most problems here was given R, FD list and a key-set, check if the key set is a SK, and is it a CK?
+![](../../../../assets/3-Attribute-Closure-Keys-and-Solved-problems-image-9-781b29bb.png)
+
+Below: if an attribute is not a part of FD list, then that attribute is a part of every candidate key.
+![](../../../../assets/3-Attribute-Closure-Keys-and-Solved-problems-image-10-781b29bb.png)
+
+LATER: what's the use of primary attributes, if CK are enough?

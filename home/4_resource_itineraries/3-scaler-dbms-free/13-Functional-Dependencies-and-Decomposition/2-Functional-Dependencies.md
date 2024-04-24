@@ -28,7 +28,7 @@ Practically, FD helps us encode business logic. HOW? (will discuss)
 Here the id to name "FD" helps enforce that determining id given name is not possible (the opposite is possible, i.e. the FD). We have encoded a negative (restriction) in this example.
 
 
-## FD types
+## FD - types
 - Trivial: if you know (or are given) more attributes than you need, then you can determine a subset of the given (that you know) attributes. Obvious. Definition is simple set inequality.
 - Non-trivial: an FD where you are able to determine value of an attribute even if you don't know it directly. Definition is simple set inequality.
 
