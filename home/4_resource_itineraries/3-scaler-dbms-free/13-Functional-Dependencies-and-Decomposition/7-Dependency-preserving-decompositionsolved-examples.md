@@ -23,5 +23,9 @@ Example 2:
 Example 3:
 ![](../../../../assets/7-Dependency-preserving-decompositionsolved-examples-image-4-781b29bb.png)
 
-Example 4
-TBD- https://www.scaler.com/topics/course/dbms/video/515/ 30 m mark
+Example 4 (early determine)
+Look: we didn't need to find all non-trivial FDs, since the union with just 1 term for each sub-relation was enough.
+
+Q: what about extras
+A: even though first term of each was enough, we used up all FDs, so any subsequent FD in any sub-relation would be a derived one, hence we're done.
+![](../../../../assets/7-Dependency-preserving-decompositionsolved-examples-image-5-781b29bb.png)

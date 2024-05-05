@@ -24,12 +24,13 @@ An attribute can only be removed, if its removal causes no change to the express
 
 ## Method - finding minimal cover
 Steps:
-1. Find FDs with the same LHS, and remove FDs with have a subset RHS.
-2. Find FDs that have extraneous attributes (in LHS or RHS), and remove extraneous attributes
+1. Find FDs with the same LHS, and remove FDs which have a common subset in RHS (keep the smallest RHS one, remove the rest).
+2. Remove extraneous attributes (removal could be in LHS or RHS, or both)
 3. Repeat step 1 and 2 until you can make no change.
 
 Example of minimal cover
 ![](../../../../assets/5-MinimalCanonical-Covers-of-FDssolved-problems-image-3-781b29bb.png)
+Here, eventually we get, AC -> DE and E -> D, and using this, we can drop D in the RHS (in 1st FD), to get AC -> E, and E -> D. *So RHS dropping of extraneous attribute is possible as well.*
 
 Example 2:
 ![](../../../../assets/5-MinimalCanonical-Covers-of-FDssolved-problems-image-4-781b29bb.png)

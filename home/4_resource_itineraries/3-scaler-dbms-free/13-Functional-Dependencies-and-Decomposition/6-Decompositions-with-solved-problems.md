@@ -39,15 +39,37 @@ If the natural join of all sub-relations equals the original table, then the dec
 
 This works because this (requirement 2) is separate from requirements 3 (i.e. FD preservation)
 
-An important point - decomposing on non-key attributes as common column leads to lossy decomposition. The core problem here (i.e. using non key attributes) is that they cause extra rows.
+An important point - decomposing on non-key attributes as common column leads to lossy decomposition. The core problem here (i.e. using non key attributes) is that non-key attribute can have duplicates that cause extra rows in join output (supposedly the single table). 
 *So decomposition must happen based on key columns*.
 
+## Check if decomposition is lossless - common attribute key nature is known
+note: Pairwise any table's SK, not both/all's SK.
 ![](../../../../assets/6-Decompositions-with-solved-problems-image-6-781b29bb.png)
-## Check if given decomposition is lossless or not
 
+Q: Shouldn't the condition be SK in both/all tables?
+A: No. Actually having atleast one suffices. Example: suppose there are two tables and one has a attribute that's a key in it, and the other table has duplicate values for those. When you do a natural join (lossless criteria), the total number of rows remain the same (i.e. one side unique was enough).
+
+Of course, if there are more than 2 tables, then the condition of SK has to old pairwise. Since after first two tables, the same key attribute (of one of the tables) cannot be used, since second table has duplicates, and pairwise join (of 1 and 2) also might have duplicates.
+## Check if decomposition is lossless - common attribute key nature is not known
+*Here input is a table, FD-set, and decomposed tables.*
+
+If we knew the nature of common keys, deciding lossless is trivial (see above section). But we don't know about the nature (key or non-key).
+
+It is quite easy to check the key nature though, using the fact for a key "attribute closure would equal all attributes". We have already seen this in [3-Attribute-Closure-Keys-and-Solved-problems](3-Attribute-Closure-Keys-and-Solved-problems.md).
+
+Algorithm:
+1. First check if all attributes are present in subrelations (union of attributes). If this does not hold, the decomposition is obviously lossy.
+2. Now, consider tables pairwise (have to be smart in choosing here), where each pair has a common attribute(s - multiple common are OK).
+3. For each, check if common attribute is a SK or not - compute attribute closure for the common column, w.r.t the FD-set.
+4. If yes, then the pair is decomposed lossless, convert the pair into one table (consider), and continue with algorithm with the remaining sub-relations (including the considered one).
+5. If we can have a final table. then the decomposition is lossless. But if at any time, neither have a SK, then its lossy.
+
+![](../../../../assets/6-Decompositions-with-solved-problems-image-7-781b29bb.png)
 
 - 30.30, gives lossless decomposition method based on FD, kind of a method
 - 37.20 talks about writing an algorithm that determines if a given decomposition is lossy or not.
 
 
-THIS MAKES NO SENSE. Ignoring.
+Example 1: ![](../../../../assets/6-Decompositions-with-solved-problems-image-8-781b29bb.png)
+Example 2:
+![](../../../../assets/6-Decompositions-with-solved-problems-image-9-781b29bb.png)
