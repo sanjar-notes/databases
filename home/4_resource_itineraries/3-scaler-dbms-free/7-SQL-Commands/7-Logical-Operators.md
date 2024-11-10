@@ -86,7 +86,6 @@ note:
 	-- this is a valid query
 	```
 ### Others `WHERE` features
-- EXISTS
 - SOME
 - EXISTS - quantifier, used in subqueries, will discuss ahead
 - ALL - quantifier, used in subqueries, will discuss ahead

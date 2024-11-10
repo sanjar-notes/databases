@@ -43,3 +43,4 @@ Since this is SQL we don't need to concern ourself with low level details of how
 ## Conclusion
 - LIMIT is used for specifying max output rows
 - OFFSET is used to set initial skip count
+- LIMIT and OFFSET are commutative.

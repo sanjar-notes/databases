@@ -51,7 +51,7 @@ if aggregate logic was COUNT, then the final result would be
 }
 */
 ```
-i.e. SQL `GROUP BY` does not return the rows in the groups, but an aggregate of such rows (per group).
+i.e. SQL `GROUP BY` does not return the rows in the groups, but an aggregate of such rows (one row per group).
 
 ## Syntax
 Since SQL `GROUP BY` is a two-step operations - group and reduce. It needs two inputs - a column to group by and an aggregate function to perform the reduce operation.
@@ -66,7 +66,7 @@ SELECT columnA, AggregateFunction(columnB) FROM table_name GROUP_BY columnA;
 AggregateFunction(columnB) FROM table_name GROUP BY columnName;
 ```
 
-You can't have free columns (i.e. columns other than aggregate or grouping column) - reason is obvious, the rows are not present in groups, only the aggregate is.
+You can't have free columns (i.e. columns other than grouping or aggregate column) - reason is obvious, the rows are not present in groups, only the aggregate is.
 Also, since groups are mutually exclusive, there can only be one aggregate column. So there can be atmost 2 columns in a `GROUP BY` query.
 ```sql
 SELECT columnC, AggregateFunction(columnB) FROM table_name GROUP_BY columnA; -- error, grouped on A, aggregate values for groups generates on B, now there's no way to include C (unsolvable because groups have many rows, which value of C would you print??)
