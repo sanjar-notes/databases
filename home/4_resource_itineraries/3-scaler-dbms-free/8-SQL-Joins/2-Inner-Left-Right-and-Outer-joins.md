@@ -15,6 +15,8 @@ If you give the sensibility criteria, the following are possible:
 - `RIGHT OUTER JOIN` (aka `RIGHT JOIN`) - keep sensible rows as well as unmatched rows of B (fill holes with NULL). Circle of B in Venn diagram.
 - `FULL OUTER JOIN` - keep sensible rows as well as all unmatched columns from A and B (fill holes with NULL). A union B in Venn diagram. *This is not available in MySQL*
 
+Note:
+- Its also possible to do A - B, but there's no default keyword for this. The pattern here is to check in the result set of LEFT JOIN to check if columns of the left side are NULL (which will be the case for common matching rows). [See info.](<https://chatgpt.com/c/6734edba-1ce0-800d-9740-679967383422#:~:text=select%20a.*%20from%20a%20where%20not%20exists%20(select%201%20from%20b%20where%20a.id%20%3D%20b.id)%3B>)
 ## More operations
 - `CROSS JOIN` - cartesian product. Comma separated tables also mean `CROSS JOIN`
 - Self join - not a keyword, but you just use the same table as join inputs.

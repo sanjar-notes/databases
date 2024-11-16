@@ -107,6 +107,9 @@ mysql> SELECT COUNT(year) FROM movies;
 +-------------+
 ```
 
+
+## Duplicates
+In all the functions, duplicates are considered. To not count duplicates again, use `SELECT COUNT(DISTINCT Price)`. i.e. mark the column as distinct.
 ## Conclusion
 Aggregate functions are used in finding a reduced value (avg, sum, count) or min/max values.
 

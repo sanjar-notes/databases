@@ -25,7 +25,7 @@ Lets consider an alternative (to the above) story where we'd not need table, and
 
 Knowing that tables help tell stories helps realize that DBMS and SQL may seem mechanical, but the end goal is to work with stories, so it's not a dry work or goal.
 
-## Key
+## Key and types of keys
 A key is a *minimal set* of attributes to uniquely identify a row.
 
 Example: In the customers table, customerId is a key. But \[customerId, customerName] is not a key, because it is not "minimum" even if it's still unique. Something like \[CustomerName, CustomerAddress] is most likely a key, since people with the same names usually don't live at the same place.

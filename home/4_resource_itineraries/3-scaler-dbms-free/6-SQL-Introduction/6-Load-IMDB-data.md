@@ -2,7 +2,9 @@
 Created Tue Apr 9, 2024 at 6:11 PM
 
 
-Download the [file](https://drive.google.com/file/d/1VkbxhqhXtqxlNXUEhlc0Rzl8Rhudjm84/view?usp=sharing)
+- IMDB - Download the [file](https://drive.google.com/file/d/1VkbxhqhXtqxlNXUEhlc0Rzl8Rhudjm84/view?usp=sharing)
+- W3Schools - loadable into onecompiler - https://github.com/sanjarcode/sample-database/tree/master
+
 
 Start MySQL in the terminal and run:
 ```sql

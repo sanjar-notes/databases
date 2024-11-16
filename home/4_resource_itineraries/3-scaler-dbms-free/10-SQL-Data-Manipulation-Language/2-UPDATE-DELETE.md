@@ -13,7 +13,8 @@ WHERE condition_expression;
 
 -- maid, UPDATE SET WHERE
 ```
-
+- `UPDATE` has `SET`
+- Have to enumerate columns.
 ## `DELETE`
 Delete a row
 ```sql

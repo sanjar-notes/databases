@@ -19,6 +19,8 @@ The rules to satisfy are:
 		1. ON EDIT NO ACTION - dangerous coz violate integrity. not widely used.
 		2. ON EDIT CASCADE - this is *widely used*. Disadvantage - can be time consuming due to cascading ops.
 		3. ON EDIT SET NULL - not widely used.
+		   
+			This is relevant only if you edit PK in referenced table. If not, then this is not an issue.
 	4. Insert op in referencing table - check whether FK value (if inserted) exists in referenced table. If not, raise error.
 	5. Delete op in referencing table - safe op, do nothing in referenced table(s), including if self referential. There may be ops if the referencing table is a referenced table for some other relation (aka table), but this is not in scope among the given two tables, current and this.
 	6. Edit op in referencing table - check for violations in the above rules for other tables.

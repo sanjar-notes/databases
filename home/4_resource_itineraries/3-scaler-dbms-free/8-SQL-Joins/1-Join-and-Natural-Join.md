@@ -26,7 +26,9 @@ ON m.id=g.movie_id;
 FROM (A JOIN B ON sensibility_expression)
 ```
 
-JOIN is also called 'inner join'
+JOIN is also called 'inner join'.
+
+- Note that JOIN happens first, then filtering (WHERE) and finally SELECT.
 
 ## Example
 ```js
@@ -71,6 +73,7 @@ SELECT * FROM table_1 NATURAL JOIN table_2; -- no criteria specificed, so same-n
 
 - In natural join, you don't need to specify anything except the table, or in the worst case, need to specify the column name (if it's different in both tables) using the `USING` keyword. `ON` is not needed in natural join.
 - The result set does not have duplicate columns for matching attributes, as usual join does. Makes sense since the join criteria itself is equality of common attributes.
+- Joins can happen based on multiple columns, the `ON` becomes a `AND` condition instead of just equality. Anyway, even single AND is a equality expression.
 
 ## `USING` shorthand
 If you want to join tables with a column that's named the same, you can skip providing the sensibility expression, instead just provide the column name.
