@@ -1,6 +1,7 @@
 # 1. Join and Natural Join
 Created Thu Apr 11, 2024 at 1:22 PM
 
+https://sqlbolt.com/lesson/select_queries_with_joins
 ## Situation
 You have two tables, with some shared information, and you wish to complete info for each row by combining these tables. This is where the concept of JOIN comes in.
 

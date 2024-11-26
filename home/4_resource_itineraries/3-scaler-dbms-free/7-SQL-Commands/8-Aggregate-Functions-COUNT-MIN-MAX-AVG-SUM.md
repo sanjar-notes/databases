@@ -108,8 +108,33 @@ mysql> SELECT COUNT(year) FROM movies;
 ```
 
 
-## Duplicates
+## Important cases
+### Duplicates
 In all the functions, duplicates are considered. To not count duplicates again, use `SELECT COUNT(DISTINCT Price)`. i.e. mark the column as distinct.
+
+### Returning NULL
+Except `COUNT`, all other functions return `null` if run against an empty table (or result set).
+
+### Aggregate functions support callbacks
+- COUNT (expression) - include or not
+	- COUNT(column) - will ignore NULLs.
+- SUM (expression) - returnage value is added.
+- AVG (expression) - returnage value is added, but COUNT(\*) is still done. Even nulls are counted.
+```sql
+SELECT COUNT(table.action = 'confirmed') 
+	-- will couunt table.action = "confirmed", all others are not counted
+FROM table;
+
+
+-- another example with SUM
+-- the value taken by SUM is returnage of the callback
+SELECT SUM(table.action = 'confirmed') 
+	-- will add 1
+FROM table;
+```
+ - To include NULLs, add `OR IS NULL` condition, and for a default value in `SUM`, use COALESCE. `SUM(COALESCE(quantity, 1))`, if quantity is NULL, takes default value of 1.
+
+
 ## Conclusion
 Aggregate functions are used in finding a reduced value (avg, sum, count) or min/max values.
 

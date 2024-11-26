@@ -1,6 +1,7 @@
 # 1. INSERT
 Created Sat Apr 13, 2024 at 12:49 PM
 
+https://sqlbolt.com/lesson/inserting_rows
 ## DQL
 The query constructs we saw earlier, like `SELECT` are categorized as DQL - data query language. A DBMS usually has many more features (including fundamental ones) like:
 - DDL (Data Definition Language) - creating tables, setting constraints etc.
@@ -51,3 +52,4 @@ VALUES
 
 Note:
 - Column names can be omitted, i.e. just table name is enough if you're adding complete rows values (i.e. all columns).
+- Column order can be changed in the query (table column order is unaffected of course).

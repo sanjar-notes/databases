@@ -1,6 +1,8 @@
 # 1. CREATE TABLE
 Created Sat Apr 13, 2024 at 1:52 PM
 
+https://sqlbolt.com/lesson/creating_tables
+
 `CREATE DATABASE`
 ```sql
 CREATE DATABASE db_name;

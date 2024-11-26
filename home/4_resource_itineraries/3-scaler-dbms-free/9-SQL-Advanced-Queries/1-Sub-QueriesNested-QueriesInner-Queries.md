@@ -11,7 +11,7 @@ Created Thu Apr 11, 2024 at 5:14 PM
 ## Task
 In our IMDB dataset, we have 3 tables:
 ```sql
-mysql> DESCRIBE actors;
+-- actors
 +------------+--------------+------+-----+---------+-------+
 | Field      | Type         | Null | Key | Default | Extra |
 +------------+--------------+------+-----+---------+-------+
@@ -20,9 +20,8 @@ mysql> DESCRIBE actors;
 | last_name  | varchar(100) | YES  | MUL | NULL    |       |
 | gender     | char(1)      | YES  |     | NULL    |       |
 +------------+--------------+------+-----+---------+-------+
-4 rows in set (0.00 sec)
 
-mysql> DESCRIBE roles;
+-- roles
 +----------+--------------+------+-----+---------+-------+
 | Field    | Type         | Null | Key | Default | Extra |
 +----------+--------------+------+-----+---------+-------+
@@ -30,9 +29,8 @@ mysql> DESCRIBE roles;
 | movie_id | int          | NO   | PRI | NULL    |       |
 | role     | varchar(100) | NO   | PRI | NULL    |       |
 +----------+--------------+------+-----+---------+-------+
-3 rows in set (0.00 sec)
 
-mysql> DESCRIBE movies;
+-- movies
 +-----------+--------------+------+-----+---------+-------+
 | Field     | Type         | Null | Key | Default | Extra |
 +-----------+--------------+------+-----+---------+-------+
@@ -41,7 +39,6 @@ mysql> DESCRIBE movies;
 | year      | int          | YES  |     | NULL    |       |
 | rankscore | float        | YES  |     | NULL    |       |
 +-----------+--------------+------+-----+---------+-------+
-4 rows in set (0.00 sec)
 ```
 
 We want to make pages like so - i.e. given movie id:
@@ -67,8 +64,10 @@ SELECT first_name, last_name FROM actors WHERE id IN
 ```
 
 
+Notes:
 - Sub-queries are also called nested queries.
 - The idea of subqueries in the direct sense means nesting and temporary variable storage, but in SQL they can only be used with the `WHERE` clause. Important to know this constraint in the language.
+- Parentheses are mandatory for subqueries. Even if they return a scalar.
 
 ## Correlated subquery
 Correlated subquery - A subquery that uses a variable from its outer query. It's like a looping happy case where outer scope's variable is used.

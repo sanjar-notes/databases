@@ -1,8 +1,12 @@
 # 10. HAVING
 Created Wed Apr 10, 2024 at 11:34 PM
 
-Task: What are the years where more than 1000 movies were released
+https://sqlbolt.com/lesson/select_queries_with_aggregates_pt_2
+> One thing that you might have noticed is that if the GROUP BY clause is executed after the WHERE clause (which filters the rows which are to be grouped), then how exactly do we filter the grouped rows?
+> 
+> Luckily, SQL allows us to do this by adding an additional HAVING
 
+Task: What are the years where more than 1000 movies were released
 ## Solution
 Essentially, we want to group, aggregate count, then filter rows (stay if count > 1000).
 So this *can* be done using `GROUP BY` with a `WHERE` clause. OK, since one query can have only one `WHERE` clause, just use a subquery. *Checked, I get a syntax error since you can't use an alias declared in a nested subquery outside it (SQL is like C, no closures)*.

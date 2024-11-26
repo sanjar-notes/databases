@@ -5,6 +5,8 @@ tags:
 # 2. UPDATE DELETE
 Created Sat Apr 13, 2024 at 1:45 PM
 
+https://sqlbolt.com/lesson/updating_rows
+https://sqlbolt.com/lesson/deleting_rows
 ## `UPDATE`
 Update a row, i.e. one or more columns of the row
 ```sql
