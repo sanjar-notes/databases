@@ -88,7 +88,7 @@ Note:
 - aggregate functions ignore NULL values
 
 ## Aggregate functions
-The aggregate functions are:
+There are 5 aggregate functions:
 1. COUNT
 2. SUM
 3. AVG
@@ -112,8 +112,8 @@ mysql> SELECT COUNT(year) FROM movies;
 ### Duplicates
 In all the functions, duplicates are considered. To not count duplicates again, use `SELECT COUNT(DISTINCT Price)`. i.e. mark the column as distinct.
 
-### Returning NULL
-Except `COUNT`, all other functions return `null` if run against an empty table (or result set).
+### Empty source set - returning NULL
+Except `COUNT`, all other functions return `null` if run against an empty table (or result set). `COUNT` will result in 0.
 
 ### Aggregate functions support callbacks
 - COUNT (expression) - include or not
