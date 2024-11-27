@@ -34,4 +34,4 @@ SELECT column_name(s) FROM table2;
 ## Helper operators
 - LENGTH
 - SUBSTRING
-- 
+- `DATE_FORMAT(T.trans_date, '%Y-%m')`

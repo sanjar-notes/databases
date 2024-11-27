@@ -117,9 +117,10 @@ Except `COUNT`, all other functions return `null` if run against an empty table 
 
 ### Aggregate functions support callbacks
 - COUNT (expression) - include or not
-	- COUNT(column) - will ignore NULLs.
+	- COUNT(column) - will ignore NULLs. TRUE AND FALSE, 1 and 0 everything is treated as true.
 - SUM (expression) - returnage value is added.
 - AVG (expression) - returnage value is added, but COUNT(\*) is still done. Even nulls are counted.
+- Ternary `IF(condition, val1, val2)`.
 ```sql
 SELECT COUNT(table.action = 'confirmed') 
 	-- will couunt table.action = "confirmed", all others are not counted
