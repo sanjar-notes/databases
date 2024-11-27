@@ -35,3 +35,44 @@ SELECT column_name(s) FROM table2;
 - LENGTH
 - SUBSTRING
 - `DATE_FORMAT(T.trans_date, '%Y-%m')`
+
+
+## Index-seekable vs table-scan queries
+Sometimes a problem can be solved using two different equivalent (return same result) queries, but one of the queries can utilize indexes if they are present, and the other cannot.
+
+It's better to prefer the one that can utilize indexes. These queries are called "index-seekable".
+
+Of course, without the index both are the same.
+
+Example:
+```sql
+-- index-seekable
+-- O(n) if index on employee_id
+-- better
+SELECT Employee.employee_id, Employee.department_id 
+FROM Employee 
+WHERE 
+    Employee.primary_flag = 'Y' 
+        OR 
+    Employee.employee_id IN 
+        (
+            SELECT DISTINCT EmployeeClone.employee_id 
+            FROM Employee AS EmployeeClone 
+            GROUP BY EmployeeClone.employee_id 
+            HAVING COUNT(*) = 1
+        );
+```
+
+vs
+
+```sql
+-- table-scan (can never utilize an index)
+-- perf: m * n in any case
+-- not good
+SELECT DISTINCT Employee.employee_id, Employee.department_id
+FROM Employee
+WHERE 
+	Employee.primary_flag = 'Y' 
+	OR 
+	(SELECT COUNT(*) FROM Employee AS EmployeeClone WHERE EmployeeClone.employee_id = Employee.employee_id) = 1;
+```
