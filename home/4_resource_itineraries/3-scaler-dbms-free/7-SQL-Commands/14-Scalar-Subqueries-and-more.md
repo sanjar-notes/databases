@@ -5,6 +5,7 @@ SQL is quite flexible in treating result sets.
 
 Here’s a quick rundown of key SQL rules where result sets can be treated as lists or scalars in different contexts:
 
+## Variations
 ### 1. **Scalar Subqueries (Single Value Result Set)**:
    - A subquery that returns **one value** (one row, one column) can be used **where a scalar value is expected** (like in `WHERE`, `HAVING`, or `SELECT`).
    - **Example** (instead of hardcoding value of Chicago `41.87`):  
@@ -101,3 +102,15 @@ Here’s a quick rundown of key SQL rules where result sets can be treated as li
 - Operators like `IN`, `ANY`, `ALL` and `EXISTS` can work with subqueries returning multiple rows.
 - **`UNION`** and **`JOIN`** treat multiple result sets as combined lists.
 
+## Nested queries
+It is perfectly fine to use a parameter from outside inside a nested query in `WHERE`. Example:
+```sql
+-- show all customer ids whose order is after '2024-01-01'
+SELECT customer_id
+FROM Customer AS CustomerClone
+WHERE (
+    SELECT COUNT(*)
+    FROM Order
+    WHERE Order.customer_id = CustomerClone.customer_id AND Order.order_date > '2024-01-01'
+) > 5;
+```

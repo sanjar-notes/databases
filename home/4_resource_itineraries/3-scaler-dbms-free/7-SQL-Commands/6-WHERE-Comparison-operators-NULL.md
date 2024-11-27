@@ -30,6 +30,8 @@ F## `WHERE` conditions
 
 More operators and constructs also exist like propositional and predicate expressions. Will learn about them next.
 
+## Subqueries in 
+
 ## Incomparability of NULL
 Get all users who don't have the teacher with id = 2;
 ```sql
