@@ -1,7 +1,7 @@
 # 5. Distinct
 Created Wed Apr 10, 2024 at 12:00 AM
 
-maid: its simple, DISTINCT is applied to the result set.
+maid: its simple, DISTINCT is applied to the result set. Only one copy of a row is kept, duplicates are discarded.
 
 Task: list all the movie genres in the database. Of course, genres may repeat so omit duplicates in the result list.
 
@@ -26,5 +26,15 @@ See explanation below (this output is valid, even though first_name is repeated 
 ![](../../../../assets/5-SELECT-DISTINCT-image-1-90a59cee.png)
 
 - Note: `SELECT DISTINC *` would dedup rows.
+
+## `SELECT COUNT(DISTINCT)`
+Same as `Set(table).length`
+
+you can count distinct column count, w.r.t one of more columns, by using this
+```sql
+SELECT COUNT (DISTINCT table.user_id) FROM table; -- count of unique
+
+SELECT COUNT (DISTINCT *) FROM table; -- count unique columns (i.e. keep only one copy)
+```
 ## Conclusion
 `SELECT DISTINCT` is used to deduplicate rows of a table, w.r.t one or more columns.
