@@ -117,9 +117,14 @@ Except `COUNT`, all other functions return `null` if run against an empty table 
 
 ### Aggregate functions support callbacks
 - COUNT (expression) - include or not
-	- COUNT(column) - will ignore NULLs. TRUE AND FALSE, 1 and 0 everything is treated as true.
+	- COUNT(column) - will ignore NULLs. Everything non-NULL (TRUE, FALSE, 1 and 0) is counted.
+	- To count NULLs too, use `COALESCE`
+	- To skip count for a row, use `IF` with `NULL`
 - SUM (expression) - returnage value is added.
+	- To skip rows, use `IF` with `NULL`
 - AVG (expression) - returnage value is added, but COUNT(\*) is still done. Even nulls are counted.
+	- To skip rows completely, use `IF` with `NULL`
+	- To omit values (in sum, but still count them), use `IF` with `0`
 - Ternary `IF(condition, val1, val2)`.
 ```sql
 SELECT COUNT(table.action = 'confirmed') 
@@ -133,6 +138,8 @@ SELECT SUM(table.action = 'confirmed')
 	-- will add 1
 FROM table;
 ```
+
+Note:
  - To include NULLs, add `OR IS NULL` condition, and for a default value in `SUM`, use COALESCE. `SUM(COALESCE(quantity, 1))`, if quantity is NULL, takes default value of 1.
 
 
