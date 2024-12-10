@@ -36,5 +36,10 @@ SELECT COUNT (DISTINCT table.user_id) FROM table; -- count of unique
 
 SELECT COUNT (DISTINCT *) FROM table; -- count unique columns (i.e. keep only one copy)
 ```
+
+## Dedup with freq count
+This can't be done using DISTINCT. Ik, misnomer pattern.
+Its simple still, do `GROUP BY` by value, and COUNT(\*).
+
 ## Conclusion
 `SELECT DISTINCT` is used to deduplicate rows of a table, w.r.t one or more columns.
