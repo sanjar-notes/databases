@@ -105,6 +105,28 @@ For clarity, lets consider the internal steps of `GROUP BY`:
 1. Grouping - grouping is now done based on "{columnA} {columnB}"
 2. Aggregate - aggregate is done on groups' rows, as usual (they are still rows from the source table)
 
+## `GROUP BY` on condition
+It is possible to group by an expression too (instead of a column).
+There's just one case here - i.e. if you're grouping w.r.t an expression, you would want to know that expression in the result set. So, you will have the expression as an alias in the `SELECT`, which does two things - initializes the alias (SELECT-pre) for use in GROUP BY, and adds it to result set too (SELECT-post).
+
+```sql
+-- given table of positive and negative integers, called Numbers with column value.
+-- prep
+CREATE TABLE Numbers (
+    value INT
+);
+
+INSERT INTO Numbers (value)
+VALUES (10), (-5), (0), (5), (10), (-2), (0), (3);
+
+-- query
+SELECT 
+  IF(value < 0, "negative", IF(value > 0, "positive", "zero")) AS sign, 
+  COUNT(*) AS frequency
+FROM Numbers
+GROUP BY sign;
+```
+^ this works.
 ## Conclusion
 *Use SQL `GROUP BY` if you want to calculate values of groups (exclusive groups) in a table*.
 
