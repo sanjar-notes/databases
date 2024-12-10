@@ -120,7 +120,8 @@ WHERE (product_id, quantity) > ANY
 ```
 Note:
 - `ALL` over an empty result set, is TRUE.
-- `ANY` over an empty result set, is FALSE,
+- `ANY` over an empty result set, is FALSE.
+- ^ above behavior same as JS.
 ## `EXISTS`
 Checks if subquery is non-empty or not. Like a `.length` operator.
 If a subquery returns any rows at all, EXISTS subquery is TRUE, and NOT EXISTS subquery is FALSE.
