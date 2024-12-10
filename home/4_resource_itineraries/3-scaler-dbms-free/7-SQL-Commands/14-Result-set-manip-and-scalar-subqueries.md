@@ -63,7 +63,8 @@ Here’s a quick rundown of key SQL rules where result sets can be treated as li
 
 ### 7. **`UNION` and `UNION ALL` (Combining Result Sets)**:
    - **`UNION`** combines results from multiple queries into a single result set, removing duplicates. It treats multiple queries' results as a combined list of values.
-   - **`UNION ALL`** combines results without removing duplicates.
+   - **`UNION ALL`** combines results without removing duplicates. This is a simple "concat" of result sets.
+   - Notice you don't need a outer SELECT for UNION.
    - **Example**:  
      ```sql
      SELECT city FROM cities WHERE population > 1000000
