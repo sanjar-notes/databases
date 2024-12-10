@@ -77,6 +77,7 @@ SELECT * FROM table_1 NATURAL JOIN table_2; -- no criteria specificed, so same-n
 - Joins can happen based on multiple columns, the `ON` becomes a `AND` condition instead of just equality. Anyway, even single AND is a equality expression.
 
 ## `USING` shorthand
+Just a syntax sugar for `ON`.
 If you want to join tables with a column that's named the same, you can skip providing the sensibility expression, instead just provide the column name.
 ```sql
 SELECT * FROM table_1 JOIN table_2 USING (columnA); 
@@ -84,6 +85,7 @@ SELECT * FROM table_1 JOIN table_2 USING (columnA);
 ```
 
 ## Some clarifications on JOIN
+- JOIN + ON can be thought of as Cartesian-product and filter combo. And that's why, sometimes u can add a filter condition that otherwise would need to be added with yet another SELECT+WHERE shell.
 - Joins in SQL are about equality - Even though you can write any "sensibility" criteria, it's usually an equality condition (instead of a comparison or something else). This is to prevent the ambiguous situation of which value (among differing) to show in the result-set.
 - Differing columns in matching rows -  Not a problem since columns are concatenated, even if they have the same name. ~~SQL's only concern during a join operation is to ensure that the specified join condition is satisfied. If there are potentially differing values in sensibly matching rows, it will raise an error. To avoid the errors, it's up to the programmer to specify how those values should be handled in the query. This could involve selecting specific columns, using `SELECT` aliases or using aggregate functions to combine or summarize the values in some way.~~
   ```
