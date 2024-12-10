@@ -114,3 +114,5 @@ WHERE (
     WHERE Order.customer_id = CustomerClone.customer_id AND Order.order_date > '2024-01-01'
 ) > 5;
 ```
+
+alternatively, one can use `GROUP BY` with `HAVING`.
