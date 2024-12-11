@@ -5,10 +5,15 @@ Created Thu Dec 12, 2024 at 12:29 AM
 CTEs are a reuse construct in SQL.
 Internally a temporary table is created, that is persisted as long as queries use it. Then its deallocated.
 
+Advantages:
+1. Better readability
+2. Simplify complex queries
+3. Efficiency - due to reuse.
+4. 
 ## Syntax
 ```sql
 -- one CTE
-WITH MyTempTable AS (builder_query_here)
+WITH MyTempTable AS (builder_query_here) -- no comma
 actual_query;
 ```
 
