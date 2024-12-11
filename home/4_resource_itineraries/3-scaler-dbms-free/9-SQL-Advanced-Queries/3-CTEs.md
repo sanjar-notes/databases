@@ -19,9 +19,9 @@ actual_query;
 
 ```sql
 -- can create multiple CTEs
-WITH MyTempTable1 AS (builder_query_here3),
-WITH MyTempTable2 AS (builder_query_here3),
-WITH MyTempTable3 AS (builder_query_here3)
+WITH MyTempTable1 AS (builder_query_here3), -- single with, comma for separation
+MyTempTable2 AS (builder_query_here3),
+MyTempTable3 AS (builder_query_here3)
 
 actual_query;
 ```
