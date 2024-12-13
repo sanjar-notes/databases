@@ -123,7 +123,7 @@ Note:
 - `ANY` over an empty result set, is FALSE.
 - ^ above behavior same as JS.
 ## `EXISTS`
-Checks if subquery is non-empty or not. Like a `.length` operator.
+Checks if subquery is empty. Like a `.length` operator.
 If a subquery returns any rows at all, EXISTS subquery is TRUE, and NOT EXISTS subquery is FALSE.
 
 - `NOT EXISTS` is the opposite.
