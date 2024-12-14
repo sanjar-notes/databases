@@ -30,8 +30,6 @@ F## `WHERE` conditions
 
 More operators and constructs also exist like propositional and predicate expressions. Will learn about them next.
 
-## Subqueries in 
-
 ## Incomparability of NULL
 Get all users who don't have the teacher with id = 2;
 ```sql
@@ -41,6 +39,15 @@ SELECT * FROM Users WHERE teacher_id !=2 OR teacher_id IS NULL; -- is correct
 ```
 
 i.e. NULL cannot be compared with anything, even themselves. Actually even `teacher_id = NULL` is wrong.
+
+
+## Conditionals with `NULL`
+When SQL encounters a conditional expression involving NULL. It uses the following rules:
+- `AND`: The result of `true` and `unknown` is `unknown`, `false` and `unknown` is `false`, while
+`unknown` and `unknown` is `unknown`.
+- `OR`: The result of `true` or `unknown` is `true`, `false` or `unknown` is `unknown`, while `unknown` or `unknown` is `unknown`.
+- `NOT`: The result of not `unknown` is x`unknown`.
+
 ## Conclusion
 `WHERE` is meant for doing selection (as defined in Relational algebra), i.e. filter out rows w.r.t some boolean condition.
 
