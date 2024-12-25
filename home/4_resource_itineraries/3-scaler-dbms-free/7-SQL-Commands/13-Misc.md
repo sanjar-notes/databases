@@ -36,6 +36,42 @@ SELECT column_name(s) FROM table2;
 - SUBSTRING
 - `DATE_FORMAT(T.trans_date, '%Y-%m')`
 
+## String functions
+- Used just like an aggregate function, syntax wise.
+- `SELECT CONCAT("Hello", col1, col2) FROM myTable`
+- `SELECT CHAR_LENGTH('Hello') FROM myTable`
+- `SELECT UPPER('hello')`, `SELECT LOWER('hello')`
+- `SELECT LENGTH('hello')`
+- `SELECT UPPER('hello')`, `SELECT LOWER('hello')`
+- `SELECT SUBSTRING("hello", 1, 1)` returns "h"
+	- starting index is 0
+	- syntax - string, index, length=\[end]
+
+## Fallback row
+safe-nav
+This works
+```sql
+SELECT DISTINCT salary AS SecondHighestSalary
+FROM Employee
+ORDER BY salary DESC
+LIMIT 1 OFFSET 1;
+```
+
+but it returns no rows if second highest does not exist (empty table / all same values / just 1 row).
+A simple way to add a safe-nav kind of NULL is to use `IFNULL`:
+```sql
+SELECT IFNULL(query, fallbackValue) AS outputColName;
+-- if query returns empty, then a fallbackValue row is shown.
+```
+```sql
+SELECT 
+    IFNULL(
+        (SELECT DISTINCT salary 
+         FROM Employee
+         ORDER BY salary DESC
+         LIMIT 1 OFFSET 1),
+    NULL) AS SecondHighestSalary;
+```
 
 ## Index-seekable vs table-scan queries
 Sometimes a problem can be solved using two different equivalent (return same result) queries, but one of the queries can utilize indexes if they are present, and the other cannot.
