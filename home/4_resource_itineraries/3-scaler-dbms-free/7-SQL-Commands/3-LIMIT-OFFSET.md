@@ -30,10 +30,10 @@ Since both keywords don't collide (obviously), they can be used together.
 SELECT name, rankscore FROM movies LIMIT 20 OFFSET 40;
 
 -- same as (skipping and limiting, or limiting and skipping are equivalent)
-SELECT name, rankscore FROM movies OFFSET 40 LIMIT 20;
+SELECT name, rankscore FROM movies LIMIT 20 OFFSET 40;
 
 -- think of it like so
-(SELECT name, rankscore FROM movies) OFFSET 40 LIMIT 20; -- order of keywords stop mattering
+(SELECT name, rankscore FROM movies) LIMIT 20 OFFSET 40; -- order of keywords stop mattering
 ```
 
 The keywords don't collide because limit is considered at the end of the query execution cycle, since it's purely about max return count. So both queries the queries when compiled, will have the same internal code, and therefore, the same result.
@@ -43,4 +43,4 @@ Since this is SQL we don't need to concern ourself with low level details of how
 ## Conclusion
 - LIMIT is used for specifying max output rows
 - OFFSET is used to set initial skip count
-- LIMIT and OFFSET are commutative.
+- LIMIT and OFFSET are ~~commutative~~. LIMIT is specified first in SQL. They are only conceptually commutative.
